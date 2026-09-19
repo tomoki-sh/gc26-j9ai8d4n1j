@@ -831,7 +831,8 @@ const DATA = {
    "status": "未特定",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：型番未特定のため、類似商品や別商品の写真は採用していません。"
+    "写真：型番未特定のため、類似商品や別商品の写真は採用していません。",
+    "候補（2026-09-19 公式確認）：AJVN135740DI「ダイヤモンド ネックレス」K10YG・35,200円。三日月と星のモチーフで、一粒ダイヤのみのデザインではない。元の商品カードと同一かは未確認。"
    ],
    "features": "商品カードに登場。正確な品番はスレッド未記載。",
    "reason": "比較履歴として保存。",
@@ -843,6 +844,10 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://vendome.jp/aoyama/"
+    },
+    {
+     "label": "候補 AJVN135740DI（公式）",
+     "url": "https://vendome.jp/aoyama/item/AJVN135740DI"
     }
    ],
    "images": {},
@@ -859,7 +864,8 @@ const DATA = {
    "status": "未特定",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：型番未特定のため、類似商品や別商品の写真は採用していません。"
+    "写真：型番未特定のため、類似商品や別商品の写真は採用していません。",
+    "候補（2026-09-19 公式確認）：AJBN160140DI「ダイヤモンド ネックレス」K10WG・一粒・46,200円。AJVN160140DI は同じデザインのK10YG版（41,800円）で、別商品。元の商品カードと同一かは未確認。"
    ],
    "features": "初期の商品カードの名称・価格のみ。",
    "reason": "比較履歴として保存。",
@@ -871,6 +877,10 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://vendome.jp/aoyama/"
+    },
+    {
+     "label": "候補 AJBN160140DI（公式）",
+     "url": "https://vendome.jp/aoyama/item/AJBN160140DI"
     }
    ],
    "images": {},
@@ -913,17 +923,18 @@ const DATA = {
   {
    "id": "J11",
    "brand": "ete",
-   "name": "ブリリアント ダイヤモンドネックレス",
-   "model": "",
+   "name": "K10MPG ブリリアント ダイヤモンド ネックレス",
+   "model": "761752",
    "price": "48,400円",
-   "status": "未特定",
+   "status": "予算外",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：型番未特定のため、類似商品や別商品の写真は採用していません。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）",
+    "品番：docx 作成後に公式ページで名称・価格の一致を確認（2026-09-19）。ダイヤ7石・合計0.02ct、長さ約40cm。"
    ],
    "features": "商品カードで紹介。",
    "reason": "比較履歴として保存。",
-   "caution": "品番未記載。今回予算超過。",
+   "caution": "今回予算超過。地金はK10ミストピンクゴールド（留め具はK10ピンクゴールド）。",
    "use": [
     "休日"
    ],
@@ -931,27 +942,36 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://www.eteweb.com/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.eteweb.com/items/761752"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/J11_item.jpg",
+    "wear": "images/products/J11_wear.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "jewelry"
+   "cat": "jewelry",
+   "photoExtra": true
   },
   {
    "id": "J12",
    "brand": "ete",
-   "name": "シューティングスター ネックレス",
-   "model": "",
+   "name": "［シェア］K10YG ダイヤモンド シューティングスター ネックレス",
+   "model": "761761",
    "price": "41,800円",
-   "status": "未特定",
+   "status": "予算外",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：型番未特定のため、類似商品や別商品の写真は採用していません。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）",
+    "品番：docx 作成後に公式ページで名称・価格の一致を確認（2026-09-19）。ダイヤ0.006ct、長さ約40cm。"
    ],
    "features": "商品カードで紹介された星系の候補。",
    "reason": "星・流れ星モチーフを好む場合。",
-   "caution": "品番未記載。今回予算超過。",
+   "caution": "今回予算超過。公式ページにある 861950 は組み合わせ用の別商品で、この商品の品番ではない。",
    "use": [
     "休日"
    ],
@@ -959,12 +979,20 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://www.eteweb.com/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.eteweb.com/items/761761"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/J12_item.jpg",
+    "wear": "images/products/J12_wear.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "jewelry"
+   "cat": "jewelry",
+   "photoExtra": true
   },
   {
    "id": "J13",
@@ -1068,17 +1096,18 @@ const DATA = {
   {
    "id": "J16",
    "brand": "TSUTSUMI",
-   "name": "プラチナ アコヤ真珠ピアス 7.5mm",
-   "model": "",
+   "name": "プラチナアコヤ真珠ピアス（7.5mm）",
+   "model": "RPE182",
    "price": "30,000円",
-   "status": "未特定",
+   "status": "要確認",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：型番未特定のため、類似商品や別商品の写真は採用していません。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）",
+    "品番：docx 作成後に公式ページで名称・素材（Pt900）・サイズ・価格の一致を確認（2026-09-19）。"
    ],
    "features": "J15のプラチナ仕様としてスレッドで紹介。",
    "reason": "白い地金を好む場合。",
-   "caution": "プラチナ仕様の品番は未特定。素材違いの写真を同一品として載せない。",
+   "caution": "30,000円は公式ページの「特別価格」表示。通常価格の記載はない。",
    "use": [
     "会食",
     "フォーマル"
@@ -1087,12 +1116,20 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://www.tsutsumishop.jp/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.tsutsumishop.jp/shop/g/gRPE182/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/J16_item.jpg",
+    "wear": "images/products/J16_wear.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "jewelry"
+   "cat": "jewelry",
+   "photoExtra": true
   },
   {
    "id": "J17",
@@ -1722,7 +1759,8 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。",
+    "候補（2026-09-19 公式確認）：VC スマート 10×30（JAN 4961607031940）。生産終了、公式の希望小売価格は82,000円（税別）。39,390円は中古品にも見られる販売価格で、新品で買える価格とは限らない。B16 とは別機種。元の商品カードと同一かは未確認。"
    ],
    "features": "具体的な倍率・型番が不明なカード掲載。",
    "reason": "比較履歴として保存。",
@@ -1736,6 +1774,10 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://www.kenko-tokina.co.jp/"
+    },
+    {
+     "label": "候補 VC スマート 10×30（公式）",
+     "url": "https://www.kenko-tokina.co.jp/optics/binoculars/vc/4961607031940.html"
     }
    ],
    "images": {},
