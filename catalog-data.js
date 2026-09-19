@@ -18,7 +18,7 @@ const DATA = {
    "kicker": "アクセサリー検討初期の候補を保存",
    "title": "ネックレス・ピアス",
    "lead": [
-    "当初はシンプルなネックレスを推していましたが、手持ちのカルティエ等との重複が分かった後に優先順位を下げました。未特定の商品カードは、似た商品へ置き換えず残しています。"
+    "当初はシンプルなネックレスを推していましたが、手持ちのカルティエ等との重複が分かった後に優先順位を下げました。型番未特定だった商品は、公式ページで確認できた候補に置き換え（J08）、予算の上限以上のものは外しました。"
    ]
   },
   "binocular": {
@@ -693,40 +693,6 @@ const DATA = {
    "cat": "accent"
   },
   {
-   "id": "J04",
-   "brand": "GEORG JENSEN",
-   "name": "OFFSPRING ブローチ S",
-   "model": "20001768",
-   "price": "46,200円",
-   "status": "予算外",
-   "priceNote": "スレッド記載価格／最新価格は未照合",
-   "notes": [
-    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
-   ],
-   "features": "スターリングシルバー。約35×45mm。",
-   "reason": "ジャケット・コートに、抽象的なループを添える。",
-   "caution": "予算超過。繊細な生地へのピン留めは避ける。",
-   "use": [
-    "学会",
-    "会食",
-    "コート"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://www.georgjensen.com/ja-jp/jewellery/brooches/offspring-brooch-small/20001768.html"
-    }
-   ],
-   "images": {
-    "item": "images/products/J04_item.jpg",
-    "wear": "images/products/J04_wear.jpg"
-   },
-   "wearLabel": "",
-   "hasWearPhoto": true,
-   "cat": "accent",
-   "photoExtra": true
-  },
-  {
    "id": "J05",
    "brand": "HERMÈS",
    "name": "スカーフリング ツイリー 《ミニ・モール》",
@@ -758,85 +724,20 @@ const DATA = {
    "photoExtra": true
   },
   {
-   "id": "J06",
-   "brand": "HERMÈS",
-   "name": "ツイリー《ブックル・エ・マイヨン》",
-   "model": "H064367Sv06",
-   "price": "40,700円",
-   "status": "予算外",
-   "priceNote": "スレッド記載価格／最新価格は未照合",
-   "notes": [
-    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
-   ],
-   "features": "シルク100％、約5×86.5cm。",
-   "reason": "首元などに色柄を足す、ジュエリーと競わない小物。",
-   "caution": "予算超過。色柄の好みが重要。",
-   "use": [
-    "休日",
-    "バッグや首元"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://www.hermes.com/jp/ja/product/ツイリー-《ブックル・エ・マイヨン》-H064367Sv06/"
-    }
-   ],
-   "images": {
-    "wear": "images/products/J06_wear.jpg"
-   },
-   "wearLabel": "",
-   "hasWearPhoto": true,
-   "cat": "accent",
-   "photoExtra": true
-  },
-  {
-   "id": "J07",
-   "brand": "ヴァンドーム青山",
-   "name": "一粒ダイヤモンド ネックレス",
-   "model": "AJVN160140DI",
-   "price": "41,800円",
-   "status": "見送り",
-   "priceNote": "今回取得した公式ページの掲載値（2026-09-17閲覧）",
-   "notes": [],
-   "features": "K10YG、トップ約3.3mm、チェーン約40cm。",
-   "reason": "小さな定番を本人が欲しい場合。",
-   "caution": "初期の推奨は後に撤回。手持ちのカルティエと用途が重複しやすい。",
-   "use": [
-    "休日"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://vendome.jp/aoyama/item/AJVN160140DI"
-    },
-    {
-     "label": "写真出典（商品ギャラリー）",
-     "url": "https://vendome.jp/aoyama/item/AJVN160140DI"
-    }
-   ],
-   "images": {
-    "item": "images/products/J07_item.jpg",
-    "wear": "images/products/J07_wear.jpg"
-   },
-   "wearLabel": "",
-   "hasWearPhoto": true,
-   "cat": "jewelry"
-  },
-  {
    "id": "J08",
    "brand": "ヴァンドーム青山",
-   "name": "K10 ベーシックネックレス",
-   "model": "",
+   "name": "ダイヤモンド ネックレス（三日月と星）",
+   "model": "AJVN135740DI",
    "price": "35,200円",
-   "status": "未特定",
+   "status": "要確認",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：型番未特定のため、類似商品や別商品の写真は採用していません。",
-    "候補（2026-09-19 公式確認）：AJVN135740DI「ダイヤモンド ネックレス」K10YG・35,200円。三日月と星のモチーフで、一粒ダイヤのみのデザインではない。元の商品カードと同一かは未確認。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）",
+    "品番：docx の「K10 ベーシックネックレス」（型番未特定・35,200円）を、2026-09-19 に公式ページで確認した候補の商品に置き換えてカード化。"
    ],
-   "features": "商品カードに登場。正確な品番はスレッド未記載。",
+   "features": "K10イエローゴールド・ダイヤモンド。三日月に星を添えたモチーフ。長さ約40cm、トップ約5.3×6.4mm。",
    "reason": "比較履歴として保存。",
-   "caution": "型番未特定のため、別商品写真や詳細仕様で補わない。",
+   "caution": "元の商品カード（K10 ベーシックネックレス・35,200円）と同一かは未確認。名前に「ベーシック」とあったが、この商品は三日月と星のモチーフで、一粒ダイヤのみのデザインではない。",
    "use": [
     "休日"
    ],
@@ -846,47 +747,18 @@ const DATA = {
      "url": "https://vendome.jp/aoyama/"
     },
     {
-     "label": "候補 AJVN135740DI（公式）",
+     "label": "写真出典（公式商品ページ）",
      "url": "https://vendome.jp/aoyama/item/AJVN135740DI"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/J08_item.jpg",
+    "wear": "images/products/J08_wear.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "jewelry"
-  },
-  {
-   "id": "J09",
-   "brand": "ヴァンドーム青山",
-   "name": "ダイヤモンドネックレス（カード掲載）",
-   "model": "",
-   "price": "46,200円",
-   "status": "未特定",
-   "priceNote": "スレッド記載価格／最新価格は未照合",
-   "notes": [
-    "写真：型番未特定のため、類似商品や別商品の写真は採用していません。",
-    "候補（2026-09-19 公式確認）：AJBN160140DI「ダイヤモンド ネックレス」K10WG・一粒・46,200円。AJVN160140DI は同じデザインのK10YG版（41,800円）で、別商品。元の商品カードと同一かは未確認。"
-   ],
-   "features": "初期の商品カードの名称・価格のみ。",
-   "reason": "比較履歴として保存。",
-   "caution": "AJVN160140DIと同一とは確認できない。型番未特定。",
-   "use": [
-    "休日"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://vendome.jp/aoyama/"
-    },
-    {
-     "label": "候補 AJBN160140DI（公式）",
-     "url": "https://vendome.jp/aoyama/item/AJBN160140DI"
-    }
-   ],
-   "images": {},
-   "wearLabel": "",
-   "hasWearPhoto": true,
-   "cat": "jewelry"
+   "cat": "jewelry",
+   "photoExtra": true
   },
   {
    "id": "J10",
@@ -914,80 +786,6 @@ const DATA = {
    "images": {
     "item": "images/products/J10_item.jpg",
     "wear": "images/products/J10_wear.jpg"
-   },
-   "wearLabel": "",
-   "hasWearPhoto": true,
-   "cat": "jewelry",
-   "photoExtra": true
-  },
-  {
-   "id": "J11",
-   "brand": "ete",
-   "name": "K10MPG ブリリアント ダイヤモンド ネックレス",
-   "model": "761752",
-   "price": "48,400円",
-   "status": "予算外",
-   "priceNote": "スレッド記載価格／最新価格は未照合",
-   "notes": [
-    "写真：docx 作成後に公式ページから追加取得（2026-09-19）",
-    "品番：docx 作成後に公式ページで名称・価格の一致を確認（2026-09-19）。ダイヤ7石・合計0.02ct、長さ約40cm。"
-   ],
-   "features": "商品カードで紹介。",
-   "reason": "比較履歴として保存。",
-   "caution": "今回予算超過。地金はK10ミストピンクゴールド（留め具はK10ピンクゴールド）。",
-   "use": [
-    "休日"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://www.eteweb.com/"
-    },
-    {
-     "label": "写真出典（公式商品ページ）",
-     "url": "https://www.eteweb.com/items/761752"
-    }
-   ],
-   "images": {
-    "item": "images/products/J11_item.jpg",
-    "wear": "images/products/J11_wear.jpg"
-   },
-   "wearLabel": "",
-   "hasWearPhoto": true,
-   "cat": "jewelry",
-   "photoExtra": true
-  },
-  {
-   "id": "J12",
-   "brand": "ete",
-   "name": "［シェア］K10YG ダイヤモンド シューティングスター ネックレス",
-   "model": "761761",
-   "price": "41,800円",
-   "status": "予算外",
-   "priceNote": "スレッド記載価格／最新価格は未照合",
-   "notes": [
-    "写真：docx 作成後に公式ページから追加取得（2026-09-19）",
-    "品番：docx 作成後に公式ページで名称・価格の一致を確認（2026-09-19）。ダイヤ0.006ct、長さ約40cm。"
-   ],
-   "features": "商品カードで紹介された星系の候補。",
-   "reason": "星・流れ星モチーフを好む場合。",
-   "caution": "今回予算超過。公式ページにある 861950 は組み合わせ用の別商品で、この商品の品番ではない。",
-   "use": [
-    "休日"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://www.eteweb.com/"
-    },
-    {
-     "label": "写真出典（公式商品ページ）",
-     "url": "https://www.eteweb.com/items/761761"
-    }
-   ],
-   "images": {
-    "item": "images/products/J12_item.jpg",
-    "wear": "images/products/J12_wear.jpg"
    },
    "wearLabel": "",
    "hasWearPhoto": true,
@@ -1025,38 +823,6 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "jewelry"
-  },
-  {
-   "id": "J14",
-   "brand": "TSUTSUMI",
-   "name": "K18YG ダイヤモンドネックレス",
-   "model": "RPN561-001",
-   "price": "50,000円",
-   "status": "見送り",
-   "priceNote": "今回取得した公式ページの掲載値（2026-09-17閲覧）",
-   "notes": [],
-   "features": "K18イエローゴールド。ダイヤモンドを横に並べたライン型ネックレス。",
-   "reason": "ブランドより素材を重視する場合。",
-   "caution": "予算超過。手持ちの主役ネックレスと比較されやすい。",
-   "use": [
-    "休日"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://www.tsutsumishop.jp/shop/g/gRPN561-001/"
-    },
-    {
-     "label": "写真出典（商品ギャラリー）",
-     "url": "https://www.tsutsumishop.jp/shop/g/gRPN561-001/"
-    }
-   ],
-   "images": {
-    "item": "images/products/J14_item.jpg"
-   },
-   "wearLabel": "",
-   "hasWearPhoto": false,
    "cat": "jewelry"
   },
   {
@@ -1130,62 +896,6 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "jewelry",
    "photoExtra": true
-  },
-  {
-   "id": "J17",
-   "brand": "STAR JEWELRY",
-   "name": "K10 ネックレス（51,700円掲載）",
-   "model": "",
-   "price": "51,700円",
-   "status": "未特定",
-   "priceNote": "スレッド記載価格／最新価格は未照合",
-   "notes": [
-    "写真：型番未特定のため、類似商品や別商品の写真は採用していません。"
-   ],
-   "features": "初期の商品カードに登場。",
-   "reason": "比較履歴として保存。",
-   "caution": "品番・正確な意匠が未記載。別モデルを推測しない。",
-   "use": [
-    "休日"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://www.star-jewelry.com/"
-    }
-   ],
-   "images": {},
-   "wearLabel": "",
-   "hasWearPhoto": true,
-   "cat": "jewelry"
-  },
-  {
-   "id": "J18",
-   "brand": "STAR JEWELRY",
-   "name": "K10 ネックレス（58,300円掲載）",
-   "model": "",
-   "price": "58,300円",
-   "status": "未特定",
-   "priceNote": "スレッド記載価格／最新価格は未照合",
-   "notes": [
-    "写真：型番未特定のため、類似商品や別商品の写真は採用していません。"
-   ],
-   "features": "星モチーフとして商品カードに登場。",
-   "reason": "比較履歴として保存。",
-   "caution": "品番・正確な意匠が未記載。予算超過。",
-   "use": [
-    "休日"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://www.star-jewelry.com/"
-    }
-   ],
-   "images": {},
-   "wearLabel": "",
-   "hasWearPhoto": true,
-   "cat": "jewelry"
   },
   {
    "id": "B01",
@@ -1538,43 +1248,6 @@ const DATA = {
    "photoExtra": true
   },
   {
-   "id": "B11",
-   "brand": "Nikon",
-   "name": "MONARCH M7 10×30",
-   "model": "",
-   "price": "52,800円（過去実売約4.5〜5.3万円）",
-   "status": "旧候補",
-   "priceNote": "スレッド記載価格／最新価格は未照合",
-   "notes": [
-    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
-   ],
-   "features": "10倍／30mm／470g／実視界6.7°／EDガラス。",
-   "reason": "ライブ以外にも長く使う方向の旧候補。",
-   "caution": "予算超過。高価格でも防振は付かない。",
-   "use": [
-    "ライブ",
-    "観劇",
-    "旅行"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://www.nikon-image.com/products/sportoptics/binoculars/monarch_m7_10x30/spec.html"
-    },
-    {
-     "label": "写真出典（公式商品ページ）",
-     "url": "https://nij.nikon.com/products/lineup/sportoptics/binoculars/monarch_m7_10x30/"
-    }
-   ],
-   "images": {
-    "item": "images/products/B11_item.jpg"
-   },
-   "wearLabel": "",
-   "hasWearPhoto": true,
-   "cat": "binocular",
-   "photoExtra": true
-  },
-  {
    "id": "B12",
    "brand": "Vixen",
    "name": "SW 8×25WP",
@@ -1643,114 +1316,6 @@ const DATA = {
    "cat": "binocular"
   },
   {
-   "id": "B14",
-   "brand": "Vixen",
-   "name": "ATERA II H10×21",
-   "model": "",
-   "price": "94,600円",
-   "status": "旧候補",
-   "priceNote": "今回取得したビクセン公式店の掲載値。実売店の価格は未更新",
-   "notes": [],
-   "features": "10倍／21mm／防振。重量は過去回答に358gと372gが混在。",
-   "reason": "高倍率で像の揺れを抑える参考機。",
-   "caution": "大幅予算超過。重量の不一致は公式仕様で要確認。",
-   "use": [
-    "ライブ",
-    "観劇",
-    "旅行"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://www.vixen.co.jp/product/11511_2/"
-    },
-    {
-     "label": "写真出典（商品ギャラリー）",
-     "url": "https://www.vixen-m.co.jp/item/11511_2.html"
-    }
-   ],
-   "images": {
-    "item": "images/products/B14_item.jpg"
-   },
-   "wearLabel": "",
-   "hasWearPhoto": false,
-   "cat": "binocular"
-  },
-  {
-   "id": "B15",
-   "brand": "Canon",
-   "name": "10×30 IS II",
-   "model": "",
-   "price": "過去カード105,050円",
-   "status": "旧候補",
-   "priceNote": "スレッド記載価格／最新価格は未照合",
-   "notes": [
-    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
-   ],
-   "features": "10倍／30mm／防振。",
-   "reason": "防振の30mm機として比較用。",
-   "caution": "大幅予算超過。今回選定の主軸から除外。",
-   "use": [
-    "ライブ",
-    "観劇",
-    "旅行"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://personal.canon.jp/"
-    },
-    {
-     "label": "写真出典（公式商品ページ）",
-     "url": "https://personal.canon.jp/product/binoculars/lineup/10x30is2"
-    }
-   ],
-   "images": {
-    "item": "images/products/B15_item.jpg"
-   },
-   "wearLabel": "",
-   "hasWearPhoto": true,
-   "cat": "binocular",
-   "photoExtra": true
-  },
-  {
-   "id": "B16",
-   "brand": "Kenko",
-   "name": "VCスマートコンパクト 8×21",
-   "model": "",
-   "price": "過去カード54,500円",
-   "status": "旧候補",
-   "priceNote": "スレッド記載価格／最新価格は未照合",
-   "notes": [
-    "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はホワイト（ブラックもあり）"
-   ],
-   "features": "8倍／21mm／防振。",
-   "reason": "防振の小型機として旧候補。",
-   "caution": "予算超過。世代・電池・本体重量を購入前確認。",
-   "use": [
-    "ライブ",
-    "観劇",
-    "旅行"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://www.kenko-tokina.co.jp/"
-    },
-    {
-     "label": "写真出典（公式商品ページ）",
-     "url": "https://www.kenko-tokina.co.jp/optics/binoculars/vc/4961607031964.html"
-    }
-   ],
-   "images": {
-    "item": "images/products/B16_item.jpg"
-   },
-   "wearLabel": "",
-   "hasWearPhoto": true,
-   "cat": "binocular",
-   "photoExtra": true
-  },
-  {
    "id": "B17",
    "brand": "Kenko",
    "name": "VC Smart 防振双眼鏡（型番未記載）",
@@ -1784,72 +1349,6 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "binocular"
-  },
-  {
-   "id": "B18",
-   "brand": "SIGHTRON",
-   "name": "FESTA 12×21 STABI III",
-   "model": "",
-   "price": "過去実売約6.5〜7万円",
-   "status": "旧候補",
-   "priceNote": "スレッド記載価格／最新価格は未照合",
-   "notes": [
-    "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はチェリーレッド（9色あり）。公式ページでは生産終了"
-   ],
-   "features": "12倍／21mm／353g／防振／アイレリーフ11mm。",
-   "reason": "遠い座席向けの参考候補。",
-   "caution": "過去回答で生産終了品と記載。新品在庫・保証は未確認。",
-   "use": [
-    "ライブ",
-    "観劇",
-    "旅行"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://www.sightron.co.jp/product/festa12x21.html"
-    }
-   ],
-   "images": {
-    "item": "images/products/B18_item.jpg"
-   },
-   "wearLabel": "",
-   "hasWearPhoto": true,
-   "cat": "binocular",
-   "photoExtra": true
-  },
-  {
-   "id": "B19",
-   "brand": "Nikon",
-   "name": "STABILIZED 10×25 S",
-   "model": "",
-   "price": "91,300円",
-   "status": "旧候補",
-   "priceNote": "スレッド記載価格／最新価格は未照合",
-   "notes": [
-    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
-   ],
-   "features": "10倍／25mm／防振。連続約12時間と紹介。",
-   "reason": "軽量防振の参考候補。",
-   "caution": "大幅予算超過。今回の主目的はヘアアクセサリーへ移行。",
-   "use": [
-    "ライブ",
-    "観劇",
-    "旅行"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://nij.nikon.com/products/lineup/sportoptics/stabilized_binoculars/stabilized_10x25_s/"
-    }
-   ],
-   "images": {
-    "item": "images/products/B19_item.jpg"
-   },
-   "wearLabel": "",
-   "hasWearPhoto": true,
-   "cat": "binocular",
-   "photoExtra": true
   },
   {
    "id": "L01",
@@ -2458,39 +1957,6 @@ const DATA = {
    "itemLabel": "ギフト券"
   },
   {
-   "id": "E02",
-   "brand": "MEGURI SPA & WELLNESS",
-   "name": "ボディ90分 ギフト券",
-   "model": "",
-   "price": "41,400円",
-   "status": "旧候補",
-   "priceNote": "スレッド記載価格／最新価格は未照合",
-   "notes": [
-    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
-   ],
-   "features": "90分以上はバス・サウナ利用付きと紹介。",
-   "reason": "ボディトリートメント好きなら。",
-   "caution": "予算超過。現在の券種・利用条件は再確認。",
-   "use": [
-    "体験",
-    "休日"
-   ],
-   "links": [
-    {
-     "label": "公式・参照ページ",
-     "url": "https://icosaka.com/offer/spa_voucher/"
-    }
-   ],
-   "images": {
-    "item": "images/products/E02_item.jpg"
-   },
-   "wearLabel": "",
-   "hasWearPhoto": true,
-   "cat": "experience",
-   "photoExtra": true,
-   "itemLabel": "ギフト券"
-  },
-  {
    "id": "E03",
    "brand": "HUGONIST",
    "name": "オリジナル香水づくり体験",
@@ -2692,7 +2158,7 @@ const DATA = {
    "label": "APPENDIX A  /  品名の出たアイデアも保存",
    "title": "型番が決まっていない候補・補助品",
    "paras": [
-    "以下はスレッドに登場したものの、特定の商品まで絞られていない案です。76項目に含めたブランド・シリーズと一部重複します。単体の公式商品写真を特定できないため、イメージ写真は付けていません。",
+    "以下はスレッドに登場したものの、特定の商品まで絞られていない案です。このカタログに含めたブランド・シリーズと一部重複します。単体の公式商品写真を特定できないため、イメージ写真は付けていません。",
     "花束・小ぶりな花束",
     "3,000〜8,000円程度の案。メインに添える。香りや持ち帰りやすさ、管理の負担を確認。",
     "作家物の花器・一輪挿し・小型花器",
@@ -2793,20 +2259,137 @@ const DATA = {
    "label": "APPENDIX D",
    "title": "写真・情報の確認状況",
    "paras": [
-    "収録商品・シリーズ・体験：76項目。単体写真を収録したものは29商品、人物の着用・使用例を収録したものは16商品です。ほかに単体写真を持つ商品でも、人物写真は未取得のものがあります。",
+    "収録商品・シリーズ・体験：60項目（予算の上限 40,000円以上の16項目は外した）。docx 作成時点で単体写真を収録したものは29商品、人物の着用・使用例を収録したものは16商品です。ほかに単体写真を持つ商品でも、人物写真は未取得のものがあります。",
     "写真を2種類とも収録した商品",
-    "H01、H02、H03、H04、H05、H06、H10、H11、H12、J02、J03、J07、J13、J15、L02、D02",
+    "H01、H02、H03、H04、H05、H06、H10、H11、H12、J02、J03、J13、J15、L02、D02",
     "単体写真のみ収録した商品",
-    "H07、H08、H09、H13、H14、J14、B01、B03、B04、B05、B12、B13、B14",
+    "H07、H08、H09、H13、H14、B01、B03、B04、B05、B12、B13",
     "未取得・未特定・装着対象外",
-    "H15、H16、J01、J04、J05、J06、J08、J09、J10、J11、J12、J16、J17、J18、B02、B06、B07、B08、B09、B10、B11、B15、B16、B17、B18、B19、L01、F01、F02、F03、F04、F05、F06、F07、D01、D03、D04、D05、D06、D07、E01、E02、E03、E04、E05、E06、E07",
+    "H15、H16、J01、J05、J08、J10、J16、B02、B06、B07、B08、B09、B10、B17、L01、F01、F02、F03、F04、F05、F06、F07、D01、D03、D04、D05、D06、D07、E01、E03、E04、E05、E06、E07",
     "上記の写真未取得は、商品・サービスそのものの評価ではありません。商品ページへのアクセス制約や、型番が特定できない提案などを含みます。未取得の箇所を生成画像や別製品の写真で埋めてはいません。",
     "過去の提案と、今回の確認を分けた主な箇所",
-    "J02：スレッド39,600円に対し、今回取得した国内公式ページは36,300円。J10：型番761825は今回取得33,000円。旧カード38,500円との同一性は未確定。J13：本文29,700円と旧カード57,200円に食い違い。今回取得した7月ユリは29,700円。B04：メーカー希望34,100円に対し、公式店の取得表示は33,000円。旧実売価格とは分離。B14：過去の重量説明に358g／372gの揺れがあるため、購入対象の仕様表を確認。F07：YURI表紙とした雑誌の号・価格は、今回の独立した確認ができていません。",
+    "J02：スレッド39,600円に対し、今回取得した国内公式ページは36,300円。J10：型番761825は今回取得33,000円。旧カード38,500円との同一性は未確定。J13：本文29,700円と旧カード57,200円に食い違い。今回取得した7月ユリは29,700円。B04：メーカー希望34,100円に対し、公式店の取得表示は33,000円。旧実売価格とは分離。F07：YURI表紙とした雑誌の号・価格は、今回の独立した確認ができていません。",
     "出典・画像について",
     "商品説明の基礎はこのスレッドです。今回取得した公式情報を補足した箇所は、カードの確認状況欄に明示しました。各カードの「公式・参照ページ」「写真出典」をクリックすると参照先に移動できます。人物写真は商品の大きさや着用の雰囲気を見る目的で掲載し、人物の身元は取り扱っていません。",
     "写真の権利は各ブランド・撮影者・販売者等に帰属します。本資料は個人的な購入比較用として作成しています。公開・再配布・販売資料への転用時は、写真の利用条件や権利者の許諾を別途確認してください。"
    ]
   }
- ]
+ ],
+ "budget": {
+  "limit": 40000,
+  "excluded": [
+   {
+    "id": "J04",
+    "name": "OFFSPRING ブローチ S",
+    "price": "46,200円",
+    "docxItem": false,
+    "docxWear": false
+   },
+   {
+    "id": "J06",
+    "name": "ツイリー《ブックル・エ・マイヨン》",
+    "price": "40,700円",
+    "docxItem": false,
+    "docxWear": false
+   },
+   {
+    "id": "J07",
+    "name": "一粒ダイヤモンド ネックレス",
+    "price": "41,800円",
+    "docxItem": true,
+    "docxWear": true
+   },
+   {
+    "id": "J09",
+    "name": "ダイヤモンドネックレス（カード掲載）",
+    "price": "46,200円",
+    "docxItem": false,
+    "docxWear": false
+   },
+   {
+    "id": "J11",
+    "name": "K10MPG ブリリアント ダイヤモンド ネックレス",
+    "price": "48,400円",
+    "docxItem": false,
+    "docxWear": false
+   },
+   {
+    "id": "J12",
+    "name": "［シェア］K10YG ダイヤモンド シューティングスター ネックレス",
+    "price": "41,800円",
+    "docxItem": false,
+    "docxWear": false
+   },
+   {
+    "id": "J14",
+    "name": "K18YG ダイヤモンドネックレス",
+    "price": "50,000円",
+    "docxItem": true,
+    "docxWear": false
+   },
+   {
+    "id": "J17",
+    "name": "K10 ネックレス（51,700円掲載）",
+    "price": "51,700円",
+    "docxItem": false,
+    "docxWear": false
+   },
+   {
+    "id": "J18",
+    "name": "K10 ネックレス（58,300円掲載）",
+    "price": "58,300円",
+    "docxItem": false,
+    "docxWear": false
+   },
+   {
+    "id": "B11",
+    "name": "MONARCH M7 10×30",
+    "price": "52,800円（過去実売約4.5〜5.3万円）",
+    "docxItem": false,
+    "docxWear": false
+   },
+   {
+    "id": "B14",
+    "name": "ATERA II H10×21",
+    "price": "94,600円",
+    "docxItem": true,
+    "docxWear": false
+   },
+   {
+    "id": "B15",
+    "name": "10×30 IS II",
+    "price": "過去カード105,050円",
+    "docxItem": false,
+    "docxWear": false
+   },
+   {
+    "id": "B16",
+    "name": "VCスマートコンパクト 8×21",
+    "price": "過去カード54,500円",
+    "docxItem": false,
+    "docxWear": false
+   },
+   {
+    "id": "B18",
+    "name": "FESTA 12×21 STABI III",
+    "price": "過去実売約6.5〜7万円",
+    "docxItem": false,
+    "docxWear": false
+   },
+   {
+    "id": "B19",
+    "name": "STABILIZED 10×25 S",
+    "price": "91,300円",
+    "docxItem": false,
+    "docxWear": false
+   },
+   {
+    "id": "E02",
+    "name": "ボディ90分 ギフト券",
+    "price": "41,400円",
+    "docxItem": false,
+    "docxWear": false
+   }
+  ]
+ }
 };
