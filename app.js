@@ -207,6 +207,23 @@ function setWant(id, n) {
   refreshSocial(id);
   writeShared(`want/${myUid}/${id}`, v || null);
 }
+/* 自分の★を消す（相手の★には触れない）。書き込みは1項目ずつ */
+function clearWant(id) {
+  if (!canEdit() || !getWant(myUid, id)) return;
+  shared.want[myUid] = Object.assign({}, shared.want[myUid], { [id]: null });
+  refreshSocial(id);
+  writeShared(`want/${myUid}/${id}`, null);
+}
+function clearAllMyWants() {
+  if (!canEdit()) return;
+  // カタログから外した商品に残っている★も含めて消す
+  const ids = Object.keys((shared.want || {})[myUid] || {}).filter(id => shared.want[myUid][id]);
+  if (!ids.length || !confirm(`自分がつけた★（${ids.length}件）をすべて消しますか？相手の★は消えません。`)) return;
+  shared.want[myUid] = {};
+  saveCache();
+  refreshSocialAll();
+  ids.forEach(id => writeShared(`want/${myUid}/${id}`, null));
+}
 function setNote(id, text) {
   if (!canEdit() || !BY_ID[id]) return;
   const t = String(text || "").slice(0, NOTE_MAX);
@@ -285,7 +302,8 @@ function starsHTML(id) {
         ? `<button type="button" class="star${on ? " on" : ""}" data-want="${i + 1}" aria-label="★${i + 1}" ${canEdit() ? "" : "disabled"}>★</button>`
         : `<span class="star${on ? " on" : ""}" aria-hidden="true">★</span>`;
     }).join("");
-    return `<div class="want-row${mine ? " mine" : ""}"><span class="who">${esc(memberName(u))}</span><span class="stars" ${mine ? "" : `aria-label="★${n}"`}>${stars}</span></div>`;
+    const clear = mine && n && canEdit() ? `<button type="button" class="want-clear" data-want-clear aria-label="自分の★をクリア">クリア</button>` : "";
+    return `<div class="want-row${mine ? " mine" : ""}"><span class="who">${esc(memberName(u))}</span><span class="stars" ${mine ? "" : `aria-label="★${n}"`}>${stars}</span>${clear}</div>`;
   }).join("");
 }
 function noteMeta(id) {
@@ -391,8 +409,10 @@ function renderItems() {
 }
 function renderFav() {
   const list = sortItems(ITEMS.filter(it => wantTotal(it.id) > 0), "want");
-  $("#fav-content").innerHTML = list.length ? tableHTML(list)
-    : `<p class="empty">まだ★がありません。各カテゴリのカードで★をつけると、ここに集まります。</p>`;
+  const mineCount = Object.values((shared.want || {})[myUid] || {}).filter(Boolean).length;
+  const clearAll = canEdit() && mineCount ? `<p class="fav-actions"><button type="button" class="want-clear" id="clear-my-wants">自分の★をすべてクリア（${mineCount}件）</button></p>` : "";
+  $("#fav-content").innerHTML = clearAll + (list.length ? tableHTML(list)
+    : `<p class="empty">まだ★がありません。各カテゴリのカードで★をつけると、ここに集まります。</p>`);
 }
 function renderGuide() {
   const picks = sortItems(ITEMS.filter(it => it.status === "本命" || it.status === "有力"), "status");
@@ -469,6 +489,8 @@ function bind() {
     if (t.dataset.lb) { openLightbox(t.dataset.lb, t.dataset.kind); return; }
     if (t.dataset.tryon) { ui.tryon = t.dataset.tryon; saveUI(); renderAll(); return; }
     if (t.dataset.view) { ui.view = t.dataset.view; saveUI(); renderItems(); return; }
+    if (t.dataset.wantClear !== undefined) { const card = t.closest("[data-id]"); if (card) clearWant(card.dataset.id); return; }
+    if (t.id === "clear-my-wants") { clearAllMyWants(); return; }
     if (t.dataset.want) { const card = t.closest("[data-id]"); if (card) setWant(card.dataset.id, parseInt(t.dataset.want, 10)); return; }
     if (t.dataset.filter) {
       const g = t.dataset.filter;

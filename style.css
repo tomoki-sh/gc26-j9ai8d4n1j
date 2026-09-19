@@ -170,6 +170,9 @@ span.star { cursor: default; font-size: 1rem; }
 .star.on { color: var(--accent); }
 .star:disabled { cursor: default; }
 .want-row.mine .star:not(:disabled):hover { transform: scale(1.15); }
+.want-clear { margin-left: auto; border: 1px solid var(--line); background: none; color: var(--ink-2); border-radius: 999px; font: inherit; font-size: .72rem; padding: 2px 10px; cursor: pointer; }
+.want-clear:hover { color: var(--accent); border-color: var(--accent); }
+.fav-actions { display: flex; justify-content: flex-end; margin: 0 0 10px; }
 .note { display: grid; gap: 3px; }
 .note-label { font-size: .72rem; color: var(--ink-2); }
 .note textarea { width: 100%; font: inherit; font-size: .86rem; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; background: var(--bg); color: var(--ink); resize: vertical; }
