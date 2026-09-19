@@ -67,5 +67,9 @@ const TRYON = {
  "H17": {
   "plain": "images/tryon/H17_plain.webp",
   "red": "images/tryon/H17_red.webp"
+ },
+ "H18": {
+  "plain": "images/tryon/H18_plain.webp",
+  "red": "images/tryon/H18_red.webp"
  }
 };
