@@ -76,13 +76,33 @@ const PRICE = Object.fromEntries(ITEMS.map(it => [it.id, parsePrice(it.price)]))
 const ui = Object.assign({ tab: "guide", status: [], band: [], use: [], starred: false, sort: "id", view: "cards", tryon: "red" }, readLS(UI_KEY, {}));
 let shared = Object.assign({ want: {}, note: {}, members: {} }, readLS(CACHE_KEY, {}));
 let myUid = "";
+let myEmail = "";   // ログイン中のアカウントのメールアドレス（Firebase から受け取るだけで、ファイルには書かない）
 let syncState = "offline";   // offline | connecting | live | denied
 let unsubs = [];
 
 function saveUI() { writeLS(UI_KEY, ui); }
 function saveCache() { writeLS(CACHE_KEY, shared); }
 
+/* 表示名：公開ファイルにメールアドレスを書かないよう、"gc26:"+メールアドレス の SHA-256 で照合する */
+const NAME_BY_HASH = {
+  "6b295f59d5e5a4c7a09ff1d728e7c702c5c958317b9e940f0eac9d366b022e6b": "Tomoki",
+  "c8debb15d6c27538e235117a7794e7c687e5ba25579d7416d09e332cab04c363": "Yuka"
+};
+let myName = "";
+async function resolveMyName(email) {
+  try {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode("gc26:" + email.toLowerCase()));
+    return NAME_BY_HASH[[...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("")] || "";
+  } catch (e) { return ""; }
+}
+/* 自分の表示名を members/{uid} に書いておき、相手の画面でも名前で出るようにする */
+function syncMyName() {
+  if (!myName || syncState !== "live" || (shared.members || {})[myUid] === myName) return;
+  shared.members = Object.assign({}, shared.members, { [myUid]: myName });
+  writeShared(`members/${myUid}`, myName);
+}
 function memberName(uid) {
+  if (uid === myUid && myName) return myName;
   const n = shared.members && shared.members[uid];
   if (n) return String(n);
   return uid === myUid ? "自分" : "相手";
@@ -130,13 +150,22 @@ function refreshStatus() {
   else if (PREVIEW && !myUid) setStatus("プレビュー（この端末だけ・閲覧のみ）", "");
   else if (!myUid) setStatus("招待されたGoogleアカウントでログインすると開きます", "");
   else if (syncState === "denied") setStatus("このアカウントでは開けません。招待されたGoogleアカウントでログインし直してください。", "error");
-  else if (syncState === "live") setStatus(`共有と同期済み（${memberName(myUid)}）`, "ok");
+  else if (syncState === "live") setStatus(myEmail ? `${memberName(myUid)} (${myEmail})` : memberName(myUid), "ok");
   else setStatus("確認しています…", "");
   setLocked(!(PREVIEW || (myUid && syncState === "live")));
 }
 function stopSync() { unsubs.forEach(f => { try { f(); } catch (e) { /* 既に解除済み */ } }); unsubs = []; }
-function onAuth(uid) {
+function onAuth(uid, email) {
   authKnown = true;
+  myEmail = uid ? String(email || "") : "";
+  myName = "";
+  if (myEmail) resolveMyName(myEmail).then(n => {
+    if (!n || uid !== myUid) return;
+    myName = n;
+    syncMyName();
+    refreshStatus();
+    refreshSocialAll();
+  });
   document.body.classList.remove("auth-pending");
   stopSync();
   myUid = uid;
@@ -152,6 +181,7 @@ function onAuth(uid) {
       pending.delete(key);
       if (!pending.size) syncState = "live";
       saveCache();
+      syncMyName();
       refreshStatus();
       refreshSocialAll();
     }, err => {
@@ -214,7 +244,7 @@ function showTab(key, scrollId) {
 function statusBadge(s) { return `<span class="badge ${STATUS_CLASS[s] || ""}">${esc(s || "—")}</span>`; }
 function galleryImages(it) {
   const list = [];
-  if (it.images.item) list.push({ src: it.images.item, cap: `${it.id} 商品単体`, kind: "item" });
+  if (it.images.item) list.push({ src: it.images.item, cap: `${it.id} ${it.itemLabel || "商品単体"}`, kind: "item" });
   if (it.images.wear) list.push({ src: it.images.wear, cap: `${it.id} ${it.wearLabel || "人物の着用・使用例"}`, kind: "wear" });
   const t = TRYON_MAP[it.id] || {};
   TRYON_VARIANTS.forEach(v => { if (t[v.key]) list.push({ src: t[v.key], cap: `${it.id} AI装着イメージ（${v.label}）・実物とは異なります`, kind: "tryon-" + v.key }); });
@@ -235,7 +265,7 @@ function tryonFigure(it) {
 }
 function gallery(it) {
   const figs = [];
-  if (it.images.item) figs.push(`<figure><button type="button" class="img-btn" data-lb="${it.id}" data-kind="item"><img data-fit="contain" src="${esc(it.images.item)}" alt="${esc(it.name)}" loading="lazy"></button><figcaption>商品単体</figcaption></figure>`);
+  if (it.images.item) figs.push(`<figure><button type="button" class="img-btn" data-lb="${it.id}" data-kind="item"><img data-fit="contain" src="${esc(it.images.item)}" alt="${esc(it.name)}" loading="lazy"></button><figcaption>${esc(it.itemLabel || "商品単体")}</figcaption></figure>`);
   if (it.images.wear) figs.push(`<figure><button type="button" class="img-btn" data-lb="${it.id}" data-kind="wear"><img src="${esc(it.images.wear)}" alt="${esc(it.name)} の着用例" loading="lazy"></button><figcaption>${esc(it.wearLabel || "人物の着用・使用例")}</figcaption></figure>`);
   else if (it.images.item && !it.hasWearPhoto) figs.push(`<figure class="ph"><div class="ph-box">人物の着用写真<br><small>確認・取得できず</small></div></figure>`);
   const tf = tryonFigure(it);

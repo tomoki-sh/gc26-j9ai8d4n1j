@@ -599,7 +599,7 @@ const DATA = {
    "status": "条件付き",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "SV925＋K10YG、外径約1.4cm。",
    "reason": "手持ちのピアスを使いながら足せる。混色や幾何学形状が好きなら。",
@@ -613,10 +613,14 @@ const DATA = {
      "url": "https://hiro-taka.com/products/bp171umf"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/J01_item.jpg",
+    "wear": "images/products/J01_wear.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "accent"
+   "cat": "accent",
+   "photoExtra": true
   },
   {
    "id": "J02",
@@ -697,7 +701,7 @@ const DATA = {
    "status": "予算外",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "スターリングシルバー。約35×45mm。",
    "reason": "ジャケット・コートに、抽象的なループを添える。",
@@ -713,10 +717,14 @@ const DATA = {
      "url": "https://www.georgjensen.com/ja-jp/jewellery/brooches/offspring-brooch-small/20001768.html"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/J04_item.jpg",
+    "wear": "images/products/J04_wear.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "accent"
+   "cat": "accent",
+   "photoExtra": true
   },
   {
    "id": "J05",
@@ -727,7 +735,7 @@ const DATA = {
    "status": "条件付き",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "真鍮製。小型スカーフ用のリング。",
    "reason": "手持ちのツイリー等の使い方を広げる。",
@@ -741,10 +749,13 @@ const DATA = {
      "url": "https://www.hermes.com/jp/ja/product/スカーフリング-ツイリー-《ミニ・モール》-H601972Sv00/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/J05_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "accent"
+   "cat": "accent",
+   "photoExtra": true
   },
   {
    "id": "J06",
@@ -755,7 +766,7 @@ const DATA = {
    "status": "予算外",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "シルク100％、約5×86.5cm。",
    "reason": "首元などに色柄を足す、ジュエリーと競わない小物。",
@@ -770,10 +781,13 @@ const DATA = {
      "url": "https://www.hermes.com/jp/ja/product/ツイリー-《ブックル・エ・マイヨン》-H064367Sv06/"
     }
    ],
-   "images": {},
+   "images": {
+    "wear": "images/products/J06_wear.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "accent"
+   "cat": "accent",
+   "photoExtra": true
   },
   {
    "id": "J07",
@@ -873,7 +887,7 @@ const DATA = {
    "status": "見送り",
    "priceNote": "今回取得した型番761825は33,000円。旧カードとの同一性は未確定",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "0.02ct、約40cm。品番761825として紹介。",
    "reason": "華奢な重ね着けを本人が希望するなら。",
@@ -887,10 +901,14 @@ const DATA = {
      "url": "https://www.eteweb.com/items/761825"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/J10_item.jpg",
+    "wear": "images/products/J10_wear.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "jewelry"
+   "cat": "jewelry",
+   "photoExtra": true
   },
   {
    "id": "J11",
@@ -1175,7 +1193,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はピンク（5色あり）"
    ],
    "features": "8倍／21mm。低倍率・軽量路線。",
    "reason": "手ブレと携帯性重視。",
@@ -1189,12 +1207,19 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://www.vixen.co.jp/lp/arena-hplus/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.vixen.co.jp/product/13431_1/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/B02_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "binocular"
+   "cat": "binocular",
+   "photoExtra": true
   },
   {
    "id": "B03",
@@ -1307,7 +1332,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "10倍／25mm。携帯性重視の候補として登場。",
    "reason": "10倍を小口径で持ち運びたい場合。",
@@ -1321,12 +1346,19 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://www.vixen.co.jp/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.vixen.co.jp/product/14722_9/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/B06_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "binocular"
+   "cat": "binocular",
+   "photoExtra": true
   },
   {
    "id": "B07",
@@ -1337,7 +1369,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "8倍／32mm。光学品質重視としてカード掲載。",
    "reason": "価格帯内の別機種として比較履歴に。",
@@ -1351,12 +1383,19 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://www.vixen.co.jp/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.vixen.co.jp/product/14542_3/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/B07_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "binocular"
+   "cat": "binocular",
+   "photoExtra": true
   },
   {
    "id": "B08",
@@ -1367,7 +1406,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "公式希望小売価格30,000円・税別を確認。旧実売価格は未更新",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "8倍／32mm／375g／実視界8.3°／ひとみ径4mm。",
    "reason": "HANA全体や暗い演出を見やすい旧本命。",
@@ -1383,10 +1422,13 @@ const DATA = {
      "url": "https://www.kenko-tokina.co.jp/optics/binoculars/highd/uvex01/compact_8x32.html"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/B08_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "binocular"
+   "cat": "binocular",
+   "photoExtra": true
   },
   {
    "id": "B09",
@@ -1397,7 +1439,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "10倍／32mm／370g／実視界6.7°。",
    "reason": "倍率・明るさ・重さのバランス。",
@@ -1413,10 +1455,13 @@ const DATA = {
      "url": "https://www.kenko-tokina.co.jp/optics/binoculars/highd/uvex01/compact_10x32.html"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/B09_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "binocular"
+   "cat": "binocular",
+   "photoExtra": true
   },
   {
    "id": "B10",
@@ -1427,7 +1472,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "10倍／30mm／470g／実視界6.6°。",
    "reason": "価格を抑えた30mmの比較候補。",
@@ -1441,12 +1486,19 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://www.nikon-image.com/products/sportoptics/binoculars/prostaff_p7_10x30/spec.html"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://nij.nikon.com/products/lineup/sportoptics/binoculars/prostaff_p7_10x30/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/B10_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "binocular"
+   "cat": "binocular",
+   "photoExtra": true
   },
   {
    "id": "B11",
@@ -1457,7 +1509,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "10倍／30mm／470g／実視界6.7°／EDガラス。",
    "reason": "ライブ以外にも長く使う方向の旧候補。",
@@ -1471,12 +1523,19 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://www.nikon-image.com/products/sportoptics/binoculars/monarch_m7_10x30/spec.html"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://nij.nikon.com/products/lineup/sportoptics/binoculars/monarch_m7_10x30/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/B11_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "binocular"
+   "cat": "binocular",
+   "photoExtra": true
   },
   {
    "id": "B12",
@@ -1589,7 +1648,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "10倍／30mm／防振。",
    "reason": "防振の30mm機として比較用。",
@@ -1603,12 +1662,19 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://personal.canon.jp/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://personal.canon.jp/product/binoculars/lineup/10x30is2"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/B15_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "binocular"
+   "cat": "binocular",
+   "photoExtra": true
   },
   {
    "id": "B16",
@@ -1619,7 +1685,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はホワイト（ブラックもあり）"
    ],
    "features": "8倍／21mm／防振。",
    "reason": "防振の小型機として旧候補。",
@@ -1633,12 +1699,19 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://www.kenko-tokina.co.jp/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.kenko-tokina.co.jp/optics/binoculars/vc/4961607031964.html"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/B16_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "binocular"
+   "cat": "binocular",
+   "photoExtra": true
   },
   {
    "id": "B17",
@@ -1679,7 +1752,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はチェリーレッド（9色あり）。公式ページでは生産終了"
    ],
    "features": "12倍／21mm／353g／防振／アイレリーフ11mm。",
    "reason": "遠い座席向けの参考候補。",
@@ -1695,10 +1768,13 @@ const DATA = {
      "url": "https://www.sightron.co.jp/product/festa12x21.html"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/B18_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "binocular"
+   "cat": "binocular",
+   "photoExtra": true
   },
   {
    "id": "B19",
@@ -1709,7 +1785,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "10倍／25mm／防振。連続約12時間と紹介。",
    "reason": "軽量防振の参考候補。",
@@ -1725,10 +1801,13 @@ const DATA = {
      "url": "https://nij.nikon.com/products/lineup/sportoptics/stabilized_binoculars/stabilized_10x25_s/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/B19_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "binocular"
+   "cat": "binocular",
+   "photoExtra": true
   },
   {
    "id": "L01",
@@ -1739,7 +1818,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はブラック（色違いあり・価格は同じ）"
    ],
    "features": "ライブ用イヤープラグ。SNR17dB、チップ4サイズと紹介。",
    "reason": "大音量を和らげる携帯小物。",
@@ -1753,10 +1832,14 @@ const DATA = {
      "url": "https://www.loopearplugs.jp/products/experience"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/L01_item.jpg",
+    "wear": "images/products/L01_wear.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "live"
+   "cat": "live",
+   "photoExtra": true
   },
   {
    "id": "L02",
@@ -1802,7 +1885,7 @@ const DATA = {
    "status": "見送り",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はHANA公式サイトのグッズ告知画像から切り出し（販売ページは終了）"
    ],
    "features": "YURIを選べるチャーム。",
    "reason": "ペンライトやバッグに添える。",
@@ -1815,12 +1898,19 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://bmsg.shop/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://hana.b-rave.tokyo/goods/260601/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/F01_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "official"
+   "cat": "official",
+   "photoExtra": true
   },
   {
    "id": "F02",
@@ -1831,7 +1921,7 @@ const DATA = {
    "status": "見送り",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "合成皮革とステンレス蓋と紹介。",
    "reason": "自宅の実用品に推し要素。",
@@ -1844,12 +1934,19 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://bmsg.shop/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://bmsg.shop/products/hana-members-collection-tissue-box-case-by-yuri"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/F02_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "official"
+   "cat": "official",
+   "photoExtra": true
   },
   {
    "id": "F03",
@@ -1860,7 +1957,7 @@ const DATA = {
    "status": "見送り",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はHANA公式サイトの告知画像（イメージ）"
    ],
    "features": "赤色点灯・点滅、単4×3本と紹介。",
    "reason": "未所有ならライブで使う。",
@@ -1873,12 +1970,19 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://bmsg.shop/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://hana.b-rave.tokyo/goods/260130-2/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/F03_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "official"
+   "cat": "official",
+   "photoExtra": true
   },
   {
    "id": "F04",
@@ -1889,7 +1993,7 @@ const DATA = {
    "status": "見送り",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はHANA公式サイトのグッズ告知画像から切り出し（販売ページは終了）"
    ],
    "features": "巾着・ショルダー付きと紹介。",
    "reason": "ペンライトの携帯に。",
@@ -1902,12 +2006,19 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://bmsg.shop/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://hana.b-rave.tokyo/goods/260601/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/F04_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "official"
+   "cat": "official",
+   "photoExtra": true
   },
   {
    "id": "F05",
@@ -1918,7 +2029,7 @@ const DATA = {
    "status": "見送り",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はHANA公式サイトのグッズ告知画像から切り出し（販売ページは終了）"
    ],
    "features": "トレカを入れる小物。",
    "reason": "YURIのカードを既に持つ場合。",
@@ -1931,12 +2042,19 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://bmsg.shop/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://hana.b-rave.tokyo/goods/260601/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/F05_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "official"
+   "cat": "official",
+   "photoExtra": true
   },
   {
    "id": "F06",
@@ -1947,7 +2065,7 @@ const DATA = {
    "status": "見送り",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はHANA公式サイトのグッズ告知画像から切り出し（販売ページは終了）"
    ],
    "features": "メンバーがランダムの商品。",
    "reason": "小さなおまけの旧候補。",
@@ -1960,12 +2078,19 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://bmsg.shop/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://hana.b-rave.tokyo/goods/260601/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/F06_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "official"
+   "cat": "official",
+   "photoExtra": true
   },
   {
    "id": "F07",
@@ -1976,7 +2101,7 @@ const DATA = {
    "status": "要確認",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "過去回答で2026年7月発売・YURI表紙と紹介。",
    "reason": "雑誌を持っていなければ添え物。",
@@ -1989,12 +2114,20 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://www.harpersbazaar.com/jp/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://prtimes.jp/main/html/rd/p/000000905.000008128.html"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/F07_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "official"
+   "cat": "official",
+   "photoExtra": true,
+   "itemLabel": "表紙"
   },
   {
    "id": "D01",
@@ -2005,7 +2138,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はデュードロップミント（色違いあり）"
    ],
    "features": "Bluetoothスピーカー。IP67・最大12時間と紹介。",
    "reason": "HANAを自宅で楽しむ。",
@@ -2018,12 +2151,20 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://www.bose.co.jp/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.bose.co.jp/p/speakers/bose-soundlink-flex-portable-speaker-2nd-gen/SLFLXII-SPEAKERWIRELESS.html"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/D01_item.jpg",
+    "wear": "images/products/D01_wear.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "daily"
+   "cat": "daily",
+   "photoExtra": true
   },
   {
    "id": "D02",
@@ -2070,7 +2211,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真は公式ページの初期表示の色（色違いあり）"
    ],
    "features": "シルク製の上下セットとして紹介。",
    "reason": "上質なナイトウェアを本人が好む場合。",
@@ -2083,12 +2224,20 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://store.wacoal.jp/disp/001400172950009/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://store.wacoal.jp/disp/01_YDX542.html"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/D03_item.jpg",
+    "wear": "images/products/D03_wear.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "daily"
+   "cat": "daily",
+   "photoExtra": true
   },
   {
    "id": "D04",
@@ -2099,7 +2248,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "コンパクトなハンディガン。",
    "reason": "短時間のボディケア用品。",
@@ -2114,10 +2263,13 @@ const DATA = {
      "url": "https://mytrex.jp/rebive-mini-xs2/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/D04_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "daily"
+   "cat": "daily",
+   "photoExtra": true
   },
   {
    "id": "D05",
@@ -2128,7 +2280,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "本体の届きにくい場所用の追加パーツ。",
    "reason": "D04と一緒に使用する旧セット案。",
@@ -2141,12 +2293,20 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://mytrex.jp/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://mytrex.jp/rebive-mini-xs2/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/D05_item.jpg",
+    "wear": "images/products/D05_wear.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "daily"
+   "cat": "daily",
+   "photoExtra": true
   },
   {
    "id": "D06",
@@ -2157,7 +2317,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "7インチ・防水モデルとして紹介。",
    "reason": "小説等の電子書籍を読む習慣がある場合。",
@@ -2170,12 +2330,20 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://www.amazon.co.jp/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.amazon.co.jp/dp/B0CFPL6CFY"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/D06_item.jpg",
+    "wear": "images/products/D06_wear.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "daily"
+   "cat": "daily",
+   "photoExtra": true
   },
   {
    "id": "D07",
@@ -2186,7 +2354,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "色を選べるキーケース・カードケース等の提案。",
    "reason": "ブランド名より色・仕様を本人に合わせる。",
@@ -2199,12 +2367,20 @@ const DATA = {
     {
      "label": "公式・参照ページ",
      "url": "https://joggo.jp/"
+    },
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://joggo.jp/products/detail/JW42104013/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/D07_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "daily"
+   "cat": "daily",
+   "photoExtra": true,
+   "itemLabel": "作例：2つ折りミニ財布（色の組み合わせは自由）"
   },
   {
    "id": "E01",
@@ -2215,7 +2391,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：特定プランの写真は未取得。装着写真は対象外。会場・提供内容は参照先で確認。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "インターコンチネンタルホテル大阪。",
    "reason": "物を増やさず休息の時間を贈る。",
@@ -2230,10 +2406,14 @@ const DATA = {
      "url": "https://icosaka.com/offer/spa_voucher/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/E01_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "experience"
+   "cat": "experience",
+   "photoExtra": true,
+   "itemLabel": "ギフト券"
   },
   {
    "id": "E02",
@@ -2244,7 +2424,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：特定プランの写真は未取得。装着写真は対象外。会場・提供内容は参照先で確認。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "90分以上はバス・サウナ利用付きと紹介。",
    "reason": "ボディトリートメント好きなら。",
@@ -2259,10 +2439,14 @@ const DATA = {
      "url": "https://icosaka.com/offer/spa_voucher/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/E02_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "experience"
+   "cat": "experience",
+   "photoExtra": true,
+   "itemLabel": "ギフト券"
   },
   {
    "id": "E03",
@@ -2273,7 +2457,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：特定プランの写真は未取得。装着写真は対象外。会場・提供内容は参照先で確認。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "大阪・北堀江の体験候補。",
    "reason": "本人が香りを選び、体験を残す。",
@@ -2288,10 +2472,14 @@ const DATA = {
      "url": "https://hugonist.com/"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/E03_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "experience"
+   "cat": "experience",
+   "photoExtra": true,
+   "itemLabel": "選べる香水ボトル"
   },
   {
    "id": "E04",
@@ -2302,7 +2490,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：特定プランの写真は未取得。装着写真は対象外。会場・提供内容は参照先で確認。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "マグカップ・小皿・花器などを作る案。",
    "reason": "一緒に作る過程と作品を贈る。",
@@ -2317,10 +2505,14 @@ const DATA = {
      "url": "https://yukobo.co.jp/day.html"
     }
    ],
-   "images": {},
+   "images": {
+    "item": "images/products/E04_item.jpg"
+   },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "experience"
+   "cat": "experience",
+   "photoExtra": true,
+   "itemLabel": "陶芸体験で作った器"
   },
   {
    "id": "E05",
@@ -2331,7 +2523,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：特定プランの写真は未取得。装着写真は対象外。会場・提供内容は参照先で確認。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "食事・制作・アウトドア等を選ぶカタログ。",
    "reason": "日程・内容を相手と選べる。",
@@ -2346,10 +2538,15 @@ const DATA = {
      "url": "https://www.sowxp.co.jp/series/2"
     }
    ],
-   "images": {},
-   "wearLabel": "",
+   "images": {
+    "item": "images/products/E05_item.jpg",
+    "wear": "images/products/E05_wear.jpg"
+   },
+   "wearLabel": "2人で体験する様子（機織り）",
    "hasWearPhoto": true,
-   "cat": "experience"
+   "cat": "experience",
+   "photoExtra": true,
+   "itemLabel": "FOR2ギフトのパッケージ"
   },
   {
    "id": "E06",
@@ -2360,7 +2557,7 @@ const DATA = {
    "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
-    "写真：特定プランの写真は未取得。装着写真は対象外。会場・提供内容は参照先で確認。"
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "定期配送の花を贈る案。",
    "reason": "花が好きで管理を楽しめる場合。",
@@ -2375,10 +2572,15 @@ const DATA = {
      "url": "https://hanaprime.jp/subscription"
     }
    ],
-   "images": {},
-   "wearLabel": "",
+   "images": {
+    "item": "images/products/E06_item.jpg",
+    "wear": "images/products/E06_wear.jpg"
+   },
+   "wearLabel": "届いた花を飾った様子",
    "hasWearPhoto": true,
-   "cat": "experience"
+   "cat": "experience",
+   "photoExtra": true,
+   "itemLabel": "定期便の花"
   },
   {
    "id": "E07",

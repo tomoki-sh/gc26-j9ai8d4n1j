@@ -136,6 +136,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 48px; }
 .gallery { display: grid; gap: 8px; }
 .gallery.g2 { grid-template-columns: 1fr 1fr; }
 .gallery.g3 { grid-template-columns: 1fr 1fr; }
+.gallery.g1 .img-btn { aspect-ratio: 4 / 3; }   /* 写真1枚のカードは横長の枠にして余白を減らす */
 /* ヘアは装着イメージが主役：上段に大きく、商品写真と着用例は下段に並べる */
 .gallery .tryon, .gallery .tryon-ph { grid-column: 1 / -1; order: -1; }
 .gallery .tryon .img-btn { aspect-ratio: 4 / 5; }
