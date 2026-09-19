@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 検索エンジンに載せない（URL推測困難方式） -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#16110f" />
+  <link rel="icon" type="image/svg+xml" href="images/emblem.svg" />
+  <title>Happy Birthday Yuka!!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@1,500&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- ?v= はキャッシュ対策。tools/prepare_publish.js が内容から自動更新する。手で変更しない。 -->
+  <link rel="stylesheet" href="style.css?v=fa4ec78a756b" />
+</head>
+<body class="locked auth-pending">
+  <!-- 最初に見えるのはこのログイン画面だけ。許可された2人のアカウントで共有データを読めたらカタログを開く（app.js の setLocked）。 -->
+  <section class="gate" id="gate" aria-labelledby="gate-title">
+    <div class="confetti" aria-hidden="true"></div>
+    <div class="gate-card">
+      <p class="gate-kicker">SEPTEMBER 2026</p>
+      <h1 class="script" id="gate-title">Happy Birthday<br><span>Yuka!!</span></h1>
+      <p class="gate-msg">お誕生日おめでとう。<br>プレゼントは、ふたりで選ぼう。</p>
+      <button id="gate-sign-in" class="pill pill-solid pill-lg" type="button">Googleでログインして開く</button>
+      <button id="gate-sign-out" class="pill pill-ghost" type="button" hidden>別のアカウントでログインし直す</button>
+      <p id="gate-status" class="gate-status" role="status">確認しています…</p>
+    </div>
+  </section>
+
+  <div id="app" hidden>
+  <header class="hero">
+    <div class="confetti" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="hero-kicker">SEPTEMBER 2026 ・ BIRTHDAY GIFT CATALOG</p>
+      <h1 class="script">Happy Birthday <span>Yuka!!</span></h1>
+      <p class="hero-lead">お誕生日おめでとう。いつもの装いに添える一品から、ライブを楽しむ道具まで。<br>気になるものに★をつけて、メモで相談しながら、いちばんの贈り物を一緒に選ぼう。</p>
+      <div class="auth-bar">
+        <span id="sync-status" class="sync-status">確認しています…</span>
+        <button id="auth-sign-out" class="pill" type="button" hidden>ログアウト</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs" role="tablist" aria-label="カテゴリ"></nav>
+
+  <main id="main">
+    <section class="panel" id="panel-guide" data-panel="guide" hidden>
+      <div class="guide">
+        <h2>この資料の読み方</h2>
+        <p>現在の本命と、検討の履歴を分けて読みます。ヘアアクセサリー16点を最初に掲載し、脇役アクセサリー、ネックレス・ピアス、双眼鏡、耳栓、公式グッズ、生活用品、体験へと続きます。最新の選定軸は「予算3万円程度・病院でも使う・主役のジュエリーと競わない」です。</p>
+        <dl class="guide-list">
+          <dt>価格</dt><dd>「スレッド記載価格」は当時の提案値で、現在の購入価格ではありません。公式ページから取得した値は別表示です。税込が基本ですが、色・仕様・送料・包装代で変わります。</dd>
+          <dt>写真</dt><dd>商品単体と人物の着用例は、公式・取扱店の実物写真です。写真は同一縮尺ではありません。「未取得」は写真を確認・取り込めなかった状態で、公式に写真が無いという意味ではありません。</dd>
+          <dt class="ai">AI装着イメージ</dt><dd><strong>ヘアアクセサリーには、このサイトで追加したAI生成の装着イメージがあります。</strong>赤い毛先／通常の髪を切り替えて雰囲気を比べられます。実物の大きさ・色・付け心地とは異なる場合があります。購入判断は商品写真と公式ページで確認してください。</dd>
+          <dt>おすすめ度</dt><dd>本命・有力・条件付きは、現在の予算・用途に対する編集上の判断です。「旧候補」はアクセサリーへの方針変更前の候補で、品質が低いという意味ではありません。</dd>
+          <dt>安全・手入れ</dt><dd>病院で使えることを保証するものではありません。院内・手術室ルールを優先してください。洗濯可否・清拭可否・髪量への適合は商品ごとに確認が必要です。</dd>
+          <dt>★とメモ</dt><dd>★（欲しい度）は2人それぞれに保存され、メモは2人で共有します。編集にはGoogleログインが必要です。</dd>
+        </dl>
+        <div id="guide-shortlist"></div>
+      </div>
+    </section>
+    <section class="panel" id="panel-items" data-panel="items" hidden>
+      <div class="section-head" id="section-head"></div>
+      <div class="toolbar" id="toolbar"></div>
+      <div id="extra"></div>
+      <div class="cards" id="cards"></div>
+    </section>
+    <section class="panel" id="panel-fav" data-panel="fav" hidden>
+      <div class="section-head"><p class="kicker">SHORTLIST</p><h2>★をつけたもの</h2><p class="lead">2人の★の合計が多い順です。行をクリックするとカードへ移動します。</p></div>
+      <div id="fav-content"></div>
+    </section>
+    <section class="panel" id="panel-appendix" data-panel="appendix" hidden>
+      <div id="appendix-content"></div>
+    </section>
+  </main>
+
+  <div id="lightbox" class="lightbox hidden" aria-hidden="true">
+    <button class="lb-close" id="lb-close" aria-label="閉じる">✕</button>
+    <button class="lb-prev" id="lb-prev" aria-label="前へ">‹</button>
+    <figure class="lb-fig"><img class="lb-img" id="lb-img" alt="" /><figcaption id="lb-cap"></figcaption></figure>
+    <button class="lb-next" id="lb-next" aria-label="次へ">›</button>
+  </div>
+
+  <footer class="foot">
+    <p class="script foot-script">with love, Happy Birthday</p>
+    <p class="muted">商品写真の権利は各ブランド・撮影者・販売者等に帰属します。私的な購入比較の範囲で参照し、出典は各カードのリンクに記載しています。AI装着イメージは Google Gemini で生成したもので、実物とは異なります。</p>
+  </footer>
+  </div>
+
+  <script src="catalog-data.js?v=fa4ec78a756b" defer></script>
+  <script src="tryon-data.js?v=fa4ec78a756b" defer></script>
+  <script src="app.js?v=fa4ec78a756b" defer></script>
+
+  <!-- Firebase（★とメモを2人で共有）。旅程サイトと同じ汎用プロジェクト travel-itinerary-sites を共用し、
+       このカタログのDBパスは app.js の DB_PATH（"gift-catalog-2026"）。
+       apiKey 等は公開してよい識別子。保護は、許可したGoogleアカウントだけを通すDBルールで行う。 -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+    import { getAuth, GoogleAuthProvider, browserLocalPersistence, setPersistence, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+    import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
+    const firebaseConfig = {
+      apiKey: "AIzaSyCeN_PFTYk0VSLitM8_S7YSJelYjqSkIzM",
+      authDomain: "travel-itinerary-sites.firebaseapp.com",
+      databaseURL: "https://travel-itinerary-sites-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "travel-itinerary-sites",
+      storageBucket: "travel-itinerary-sites.firebasestorage.app",
+      messagingSenderId: "933681618085",
+      appId: "1:933681618085:web:8b59a29239aaecfaec414c"
+    };
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    window.FB = { db: getDatabase(app), ref, onValue, set, uid: "" };
+    const loginButton = document.getElementById("gate-sign-in");
+    const logoutButtons = [document.getElementById("auth-sign-out"), document.getElementById("gate-sign-out")];
+    const provider = new GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: "select_account" });
+    const persistence = setPersistence(auth, browserLocalPersistence);
+    loginButton.addEventListener("click", async () => {
+      loginButton.disabled = true;
+      try { await persistence; await signInWithPopup(auth, provider); }
+      catch (e) { if (e.code !== "auth/popup-closed-by-user") window.Catalog.setStatus("ログインできませんでした。ポップアップの許可と通信状態を確認してください。", "error"); }
+      finally { loginButton.disabled = false; }
+    });
+    logoutButtons.forEach(b => b.addEventListener("click", async () => {
+      if (!confirm("ログアウトしますか？（このブラウザに残した表示用の控えも消えます）")) return;
+      await signOut(auth); window.Catalog.clearCache(); location.reload();
+    }));
+    onAuthStateChanged(auth, user => {
+      const apply = () => {
+        const g = user && !user.isAnonymous ? user : null;
+        loginButton.hidden = !!g;
+        logoutButtons.forEach(b => { b.hidden = !g; });
+        window.Catalog.onAuth(g ? g.uid : "");
+      };
+      if (window.Catalog) apply(); else window.addEventListener("catalog-ready", apply, { once: true });
+    });
+  </script>
+</body>
+</html>
