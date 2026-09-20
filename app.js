@@ -420,15 +420,14 @@ function renderFav() {
     : `<p class="empty">まだ★がありません。各カテゴリのカードで★をつけると、ここに集まります。</p>`);
 }
 function renderGuide() {
-  // おすすめ順がある商品（ヘア）は上位5点、無ければ本命・有力
-  const ranked = ITEMS.some(it => it.rank);
-  const picks = ranked ? sortItems(ITEMS.filter(it => it.rank), "rec").slice(0, 5)
-    : sortItems(ITEMS.filter(it => it.status === "本命" || it.status === "有力"), "status");
-  $("#guide-shortlist").innerHTML = `<h3>${ranked ? "ヘアアクセサリーのおすすめ 上位5" : "現在の本命・有力"}</h3><div class="mini-list">${picks.map(it => {
+  // おすすめ順のある章は上位5点ずつ。無ければ本命・有力
+  const groups = (DATA.rankings || []).map(g => ({ title: (DATA.sections[g.cat] || {}).title || g.cat, list: sortItems(ITEMS.filter(it => it.cat === g.cat && it.rank), "rec").slice(0, 5) })).filter(g => g.list.length);
+  const blocks = groups.length ? groups : [{ title: "", list: sortItems(ITEMS.filter(it => it.status === "本命" || it.status === "有力"), "status") }];
+  $("#guide-shortlist").innerHTML = blocks.map(g => `<h3>${g.title ? esc(g.title) + "のおすすめ 上位" + g.list.length : "現在の本命・有力"}</h3><div class="mini-list">${g.list.map(it => {
     const t = TRYON_MAP[it.id] || {};
     const img = t[ui.tryon] || it.images.item || "";
     return `<a class="mini" href="#${it.id}" data-jump="${it.id}">${img ? `<img src="${esc(img)}" alt="" loading="lazy">` : ""}<span>${it.rank ? rankBadge(it) : statusBadge(it.status)} <b>${it.id}</b> ${esc(it.name)}<br><small>${esc(it.brand)}・${esc(it.price)}</small></span></a>`;
-  }).join("")}</div>`;
+  }).join("")}</div>`).join("");
 }
 function renderAppendix() {
   const isHeading = t => t.length <= 28 && !/[。．]$/.test(t) && !/^\d/.test(t);

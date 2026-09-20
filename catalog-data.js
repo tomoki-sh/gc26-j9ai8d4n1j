@@ -19,7 +19,8 @@ const DATA = {
    "kicker": "アクセサリー検討初期の候補を保存",
    "title": "ネックレス・ピアス",
    "lead": [
-    "当初はシンプルなネックレスを推していましたが、手持ちのカルティエ等との重複が分かった後に優先順位を下げました。型番未特定だった商品は、公式ページで確認できた候補に置き換え（J08）、予算の上限以上のものは外しました。J19〜J25 は、9月の誕生花（リンドウ）と誕生石（サファイヤ・クンツァイト）から 2026-09-20 に追加した候補です。"
+    "並び順は、9月の誕生日にちなむか・手持ちの主役と競わないか・予算・在庫から付けたおすすめ順です（1位 J19、2位 J21、3位 J20）。「有力・条件付き」などの表示は別の見方です。",
+    "当初はシンプルなネックレスを推していましたが、手持ちのカルティエ等との重複が分かった後に優先順位を下げました。型番未特定だった商品は、公式ページで確認できた候補に置き換え（J08）、予算の上限以上のものは外しました。"
    ]
   },
   "binocular": {
@@ -844,7 +845,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "jewelry",
-   "photoExtra": true
+   "photoExtra": true,
+   "rank": 11
   },
   {
    "id": "J10",
@@ -876,7 +878,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "jewelry",
-   "photoExtra": true
+   "photoExtra": true,
+   "rank": 12
   },
   {
    "id": "J13",
@@ -909,7 +912,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "jewelry"
+   "cat": "jewelry",
+   "rank": 6
   },
   {
    "id": "J19",
@@ -944,7 +948,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "jewelry",
    "added": true,
-   "photoExtra": true
+   "photoExtra": true,
+   "rank": 1
   },
   {
    "id": "J20",
@@ -979,7 +984,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "jewelry",
    "added": true,
-   "photoExtra": true
+   "photoExtra": true,
+   "rank": 3
   },
   {
    "id": "J21",
@@ -1015,7 +1021,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "jewelry",
    "added": true,
-   "photoExtra": true
+   "photoExtra": true,
+   "rank": 2
   },
   {
    "id": "J22",
@@ -1050,7 +1057,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "jewelry",
    "added": true,
-   "photoExtra": true
+   "photoExtra": true,
+   "rank": 9
   },
   {
    "id": "J23",
@@ -1085,7 +1093,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "jewelry",
    "added": true,
-   "photoExtra": true
+   "photoExtra": true,
+   "rank": 5
   },
   {
    "id": "J24",
@@ -1119,7 +1128,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "jewelry",
    "added": true,
-   "photoExtra": true
+   "photoExtra": true,
+   "rank": 10
   },
   {
    "id": "J25",
@@ -1154,7 +1164,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "jewelry",
    "added": true,
-   "photoExtra": true
+   "photoExtra": true,
+   "rank": 4
   },
   {
    "id": "J15",
@@ -1188,7 +1199,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "jewelry"
+   "cat": "jewelry",
+   "rank": 7
   },
   {
    "id": "J16",
@@ -1226,7 +1238,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "jewelry",
-   "photoExtra": true
+   "photoExtra": true,
+   "rank": 8
   },
   {
    "id": "B01",
@@ -2723,8 +2736,14 @@ const DATA = {
    }
   ]
  },
- "ranking": {
-  "cat": "hair",
-  "decided": "2026-09-20"
- }
+ "rankings": [
+  {
+   "cat": "hair",
+   "decided": "2026-09-20"
+  },
+  {
+   "cat": "jewelry",
+   "decided": "2026-09-20"
+  }
+ ]
 };
