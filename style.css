@@ -117,7 +117,6 @@ main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 48px; }
 /* カード */
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 18px; }
 .card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; display: flex; flex-direction: column; gap: 10px; border-top: 4px solid var(--line); transition: box-shadow .3s; }
-.card.s-top { border-top-color: var(--accent); }
 .card.s-strong { border-top-color: var(--gold); }
 .card.flash { box-shadow: 0 0 0 3px var(--accent); }
 .card-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: .8rem; }
@@ -128,11 +127,9 @@ main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 48px; }
 .price { margin: 4px 0 0; font-weight: 700; font-size: 1.05rem; }
 .price small { display: block; font-weight: 400; font-size: .74rem; color: var(--ink-2); }
 .badge { display: inline-block; font-size: .72rem; padding: 1px 9px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); color: var(--ink-2); white-space: nowrap; }
-.badge.s-top { background: var(--accent); color: #fff; border-color: var(--accent); }
-.badge.s-strong { background: #f3e9d6; color: #6d5325; border-color: #e3d2ad; }
-.badge.s-cond { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
-.badge.s-over, .badge.s-pass { text-decoration: none; opacity: .8; }
 .badge.rank { background: #fff; color: var(--accent); border-color: var(--accent); font-weight: 600; }
+.badge.check { background: var(--bg); color: var(--ink-2); }
+.note-meta .warn { color: var(--accent); }
 .badge.rank.top { background: var(--accent); color: #fff; }
 
 .gallery { display: grid; gap: 8px; }

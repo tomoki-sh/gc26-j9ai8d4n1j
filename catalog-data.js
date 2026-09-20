@@ -6,7 +6,7 @@ const DATA = {
    "kicker": "髪を結ぶ日常に添える、現在の中心候補",
    "title": "ヘアアクセサリー",
    "lead": [
-    "並び順は、贈る側が 2026-09-20 に決めたおすすめ順です（1位 H17、2位 H04、3位 H18）。「本命・有力・条件付き」の表示は元の資料での判断で、順位とは別です。",
+    "並び順は、贈る側が 2026-09-20 に決めたおすすめ順です（1位 H17、2位 H04、3位 H18）。カードの「確認」は、買う前に確かめたいことです。",
     "クリップやバレッタは、髪量と普段の留め方で使い心地が変わります。"
    ]
   },
@@ -19,8 +19,8 @@ const DATA = {
    "kicker": "アクセサリー検討初期の候補を保存",
    "title": "ネックレス・ピアス",
    "lead": [
-    "並び順は、9月の誕生日にちなむか・手持ちの主役と競わないか・予算・在庫から付けたおすすめ順です（1位 J19、2位 J21、3位 J20）。「有力・条件付き」などの表示は別の見方です。",
-    "当初はシンプルなネックレスを推していましたが、手持ちのカルティエ等との重複が分かった後に優先順位を下げました。型番未特定だった商品は、公式ページで確認できた候補に置き換え（J08）、予算の上限以上のものは外しました。"
+    "並び順は、9月の誕生日にちなむか・手持ちの主役と競わないか・今から買えるかで付けたおすすめ順です（1位 J19、2位 J21、3位 J20）。カードの「確認」は、買う前に確かめたいことです。",
+    "当初はシンプルなネックレスを推していましたが、手持ちのカルティエ等との重複が分かった後に優先順位を下げました。型番未特定だった商品は、公式ページで確認できた候補に置き換えました（J08）。"
    ]
   },
   "binocular": {
@@ -52,7 +52,7 @@ const DATA = {
    "kicker": "日程・内容が確定していない提案も含む",
    "title": "体験・ギフト案",
    "lead": [
-    "体験の料金には、当時のプラン例と単なる予算案が混在します。予約・空き・有効期限・二人分の総額は未確定です。"
+    "体験の料金には、当時のプラン例と概算が混在します。予約・空き・有効期限・二人分の総額は未確定です。"
    ]
   }
  },
@@ -63,12 +63,11 @@ const DATA = {
    "name": "パール付きシュシュ",
    "model": "TCHC-25T-A23",
    "price": "33,000円",
-   "status": "有力",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [],
    "features": "黒／約11×10cm。レーヨン・シルク生地、クリスタルパール装飾。",
    "reason": "休日にも使う贈り物らしさ。手持ちのネックレスと競合しない。",
-   "caution": "予算＋3,000円。洗濯・クリーニング不可と案内。病院での使用可否は院内規則を優先。",
+   "caution": "洗濯・クリーニング不可と案内。病院での使用可否は院内規則を優先。",
    "use": [
     "通勤",
     "会食",
@@ -91,7 +90,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "hair",
-   "rank": 4
+   "rank": 4,
+   "check": "手入れ方法を確認"
   },
   {
    "id": "H02",
@@ -99,11 +99,10 @@ const DATA = {
    "name": "LISERAI ポニー",
    "model": "APY-17485-02P23",
    "price": "26,400円",
-   "status": "本命",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [],
    "features": "黒い曲面プレートにべっ甲調の縁取り。フランス製。",
-   "reason": "約３万円、シック、髪型不明という現条件で最有力。",
+   "reason": "シックで、日常の一つ結びにそのまま足せる。",
    "caution": "普通のゴムで先に結び、その上に装着。飾りを引っ張らない。アルコール清拭には不向き。",
    "use": [
     "日常の一つ結び"
@@ -125,7 +124,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "hair",
-   "rank": 7
+   "rank": 7,
+   "check": "手入れ方法を確認"
   },
   {
    "id": "H03",
@@ -133,12 +133,11 @@ const DATA = {
    "name": "ポニー APY-78",
    "model": "APY-78",
    "price": "15,400円",
-   "status": "有力",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [],
    "features": "黒い湾曲プレートのベーシックな飾り付きゴム。",
-   "reason": "控えめさと取り入れやすさを重視する場合。予算を使い切る必要はない。",
-   "caution": "１点では当初予算より低め。使用法・ゴム交換対応を正規店で確認。",
+   "reason": "控えめさと取り入れやすさを重視する場合。",
+   "caution": "使用法・ゴム交換対応を正規店で確認。",
    "use": [
     "日常の一つ結び"
    ],
@@ -159,7 +158,8 @@ const DATA = {
    "wearLabel": "着用参考（別色）",
    "hasWearPhoto": true,
    "cat": "hair",
-   "rank": 15
+   "rank": 15,
+   "check": "使い方・ゴム交換を確認"
   },
   {
    "id": "H04",
@@ -167,7 +167,6 @@ const DATA = {
    "name": "LISERAI バレッタ 8cm",
    "model": "AA8-12689-03",
    "price": "34,100円",
-   "status": "条件付き",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [],
    "features": "黒縁のベージュ系、左右非対称リボン。",
@@ -194,7 +193,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "hair",
-   "rank": 2
+   "rank": 2,
+   "check": "髪量・留め方を確認"
   },
   {
    "id": "H05",
@@ -202,7 +202,6 @@ const DATA = {
    "name": "BASIC CLASSIQUES クリップ M",
    "model": "ACCM-7705",
    "price": "18,700円",
-   "status": "条件付き",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [],
    "features": "石や大きなモチーフを省いた定番クリップ。",
@@ -228,7 +227,8 @@ const DATA = {
    "wearLabel": "着用参考（別色）",
    "hasWearPhoto": true,
    "cat": "hair",
-   "rank": 11
+   "rank": 11,
+   "check": "髪量・留め方を確認"
   },
   {
    "id": "H06",
@@ -236,7 +236,6 @@ const DATA = {
    "name": "BASIC CLASSIQUES クリップ L",
    "model": "ACCL-7706",
    "price": "20,900円",
-   "status": "条件付き",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [],
    "features": "黒い定番クリップ。スレッド記載寸法：横11×縦4.5cm。",
@@ -262,7 +261,8 @@ const DATA = {
    "wearLabel": "着用参考（別色）",
    "hasWearPhoto": true,
    "cat": "hair",
-   "rank": 18
+   "rank": 18,
+   "check": "大きさ・髪量を確認"
   },
   {
    "id": "H07",
@@ -270,7 +270,6 @@ const DATA = {
    "name": "ティアラクイーン クリップ M",
    "model": "70900033",
    "price": "26,400円",
-   "status": "条件付き",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [],
    "features": "クリスタル装飾のある定番。幅7.3cmと紹介。",
@@ -296,7 +295,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": false,
    "cat": "hair",
-   "rank": 5
+   "rank": 5,
+   "check": "髪量・職場のルールを確認"
   },
   {
    "id": "H08",
@@ -304,7 +304,6 @@ const DATA = {
    "name": "レヴル クリップ M",
    "model": "70900102",
    "price": "14,300円",
-   "status": "条件付き",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [],
    "features": "石なし。黒い樹脂と金色の歯、幅7.3cm。",
@@ -329,7 +328,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": false,
    "cat": "hair",
-   "rank": 14
+   "rank": 14,
+   "check": "髪量・在庫を確認"
   },
   {
    "id": "H09",
@@ -337,12 +337,11 @@ const DATA = {
    "name": "レヴル クリップ L",
    "model": "70900103",
    "price": "17,600円",
-   "status": "条件付き",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [],
    "features": "Mと同系統の大きめサイズ。幅9.5cmと紹介。",
    "reason": "髪量が多い人で、Mでは収まりにくい場合。",
-   "caution": "黒の在庫は未確認。予算や在庫を理由にサイズを変えない。",
+   "caution": "黒の在庫は未確認。在庫を理由にサイズを変えない。",
    "use": [
     "日常のまとめ髪"
    ],
@@ -362,7 +361,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": false,
    "cat": "hair",
-   "rank": 17
+   "rank": 17,
+   "check": "髪量・在庫を確認"
   },
   {
    "id": "H10",
@@ -370,7 +370,6 @@ const DATA = {
    "name": "ルーサイト ポニーカフ ウィズ メタルプレート",
    "model": "25LF-512-57-2",
    "price": "25,300円",
-   "status": "有力",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [],
    "features": "約3×5cm。アクリルと真鍮で毛束を覆う形。",
@@ -397,7 +396,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "hair",
-   "rank": 8
+   "rank": 8,
+   "check": "飾りの大きさを確認"
   },
   {
    "id": "H11",
@@ -405,7 +405,6 @@ const DATA = {
    "name": "メタル ダイヤモンド ポニーカフ",
    "model": "",
    "price": "28,600円",
-   "status": "条件付き",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [],
    "features": "約2.5×4cm。ネイビーの真鍮とクリスタルガラス。",
@@ -432,7 +431,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "hair",
-   "rank": 6
+   "rank": 6,
+   "check": "石飾りの好みを確認"
   },
   {
    "id": "H12",
@@ -440,7 +440,6 @@ const DATA = {
    "name": "メタル ダブルライン ポニー",
    "model": "",
    "price": "25,300円",
-   "status": "条件付き",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "装着写真はゴールド色。単体写真はサテンシルバー。色違いの参考。"
@@ -469,7 +468,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "hair",
-   "rank": 9
+   "rank": 9,
+   "check": "色を確認（写真は別色）"
   },
   {
    "id": "H13",
@@ -477,7 +477,6 @@ const DATA = {
    "name": "メタル ジェム ポニーカフ",
    "model": "",
    "price": "16,500円",
-   "status": "条件付き",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [],
    "features": "約1.2×4.7cm。真鍮。細い金属アクセント。",
@@ -502,7 +501,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": false,
    "cat": "hair",
-   "rank": 12
+   "rank": 12,
+   "check": "色味の好みを確認"
   },
   {
    "id": "H14",
@@ -510,11 +510,10 @@ const DATA = {
    "name": "VALLETTA-NOIR 01",
    "model": "24011101-19",
    "price": "15,400円",
-   "status": "条件付き",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [],
    "features": "黒いアセテート。幅9×縦4cm、丸みのある造形。",
-   "reason": "ブランドの序列より、黒い造形を気に入って選ぶ。",
+   "reason": "黒い造形を気に入って選ぶ。",
    "caution": "髪量・バレッタの使い方に依存。過去回答で売り切れと記載。",
    "use": [
     "結び目",
@@ -536,7 +535,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": false,
    "cat": "hair",
-   "rank": 16
+   "rank": 16,
+   "check": "髪量・在庫を確認"
   },
   {
    "id": "H15",
@@ -544,7 +544,6 @@ const DATA = {
    "name": "キルテッド ミディアム ジョー",
    "model": "",
    "price": "23,320円",
-   "status": "条件付き",
    "priceNote": "今回取得した公式ページの掲載値（2026-09-17閲覧）",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -569,7 +568,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "hair",
    "photoExtra": true,
-   "rank": 10
+   "rank": 10,
+   "check": "髪量・留め方を確認"
   },
   {
    "id": "H16",
@@ -577,7 +577,6 @@ const DATA = {
    "name": "エリーゼ ジョー",
    "model": "",
    "price": "17,160円",
-   "status": "条件付き",
    "priceNote": "今回取得した公式一覧掲載値",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -606,7 +605,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "hair",
    "photoExtra": true,
-   "rank": 13
+   "rank": 13,
+   "check": "髪量・在庫を確認"
   },
   {
    "id": "H17",
@@ -614,7 +614,6 @@ const DATA = {
    "name": "【VENDOME】M クリップ（ブラウン）",
    "model": "ICCM-15571-04（色 H2）",
    "price": "34,100円",
-   "status": "条件付き",
    "priceNote": "2026-09-19 に公式ページで確認（在庫わずか）",
    "notes": [
     "商品：docx 作成後に追加（2026-09-19）。",
@@ -641,7 +640,8 @@ const DATA = {
    "cat": "hair",
    "added": true,
    "photoExtra": true,
-   "rank": 1
+   "rank": 1,
+   "check": "髪量・留め方を確認"
   },
   {
    "id": "H18",
@@ -649,7 +649,6 @@ const DATA = {
    "name": "【VENDOME】M クリップ（ブラック）",
    "model": "ICCM-15571-04（色 N3）",
    "price": "34,100円",
-   "status": "条件付き",
    "priceNote": "2026-09-19 に公式ページで確認（公式は在庫なし・再入荷メール受付）",
    "notes": [
     "商品：docx 作成後に追加（2026-09-19）。H17 の色違い。",
@@ -675,7 +674,8 @@ const DATA = {
    "cat": "hair",
    "added": true,
    "photoExtra": true,
-   "rank": 3
+   "rank": 3,
+   "check": "在庫を確認"
   },
   {
    "id": "J01",
@@ -683,14 +683,13 @@ const DATA = {
    "name": "ゴールドクレスト スクエアイヤーカフ",
    "model": "BP171UMF",
    "price": "36,300円",
-   "status": "条件付き",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
    ],
    "features": "SV925＋K10YG、外径約1.4cm。",
    "reason": "手持ちのピアスを使いながら足せる。混色や幾何学形状が好きなら。",
-   "caution": "約３万円を超過。耳の形で痛み・脱落が変わるため試着推奨。",
+   "caution": "耳の形で痛み・脱落が変わるため試着推奨。",
    "use": [
     "休日"
    ],
@@ -707,7 +706,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "accent",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "耳の形に合うか試着"
   },
   {
    "id": "J02",
@@ -715,7 +715,6 @@ const DATA = {
    "name": "MANHATTAN ポリゴン ダイヤモンド イヤーカフ",
    "model": "MH88SDF",
    "price": "36,300円（今回取得）／39,600円（スレッド）",
-   "status": "条件付き",
    "priceNote": "国内公式の取得表示とスレッド記載が異なるため併記",
    "notes": [
     "耳上部のポリゴン型イヤーカフが対象。ほかの装着品は付属しない。"
@@ -742,7 +741,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "accent"
+   "cat": "accent",
+   "check": "片耳用・価格を確認"
   },
   {
    "id": "J03",
@@ -750,7 +750,6 @@ const DATA = {
    "name": "Ear Cuff Thick",
    "model": "",
    "price": "22,300円",
-   "status": "条件付き",
    "priceNote": "今回取得した公式ページの掲載値（2026-09-17閲覧）",
    "notes": [
     "公式モデル着用例。ほかのピアス等は付属しない。"
@@ -777,7 +776,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "accent"
+   "cat": "accent",
+   "check": "耳に合う大きさを確認"
   },
   {
    "id": "J05",
@@ -785,7 +785,6 @@ const DATA = {
    "name": "スカーフリング ツイリー 《ミニ・モール》",
    "model": "H601972Sv00",
    "price": "31,900円",
-   "status": "条件付き",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -808,7 +807,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "accent",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "スカーフを使うか確認"
   },
   {
    "id": "J08",
@@ -816,7 +816,6 @@ const DATA = {
    "name": "ダイヤモンド ネックレス（三日月と星）",
    "model": "AJVN135740DI",
    "price": "35,200円",
-   "status": "要確認",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）",
@@ -846,7 +845,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "jewelry",
    "photoExtra": true,
-   "rank": 11
+   "rank": 11,
+   "check": "同じ商品か確認"
   },
   {
    "id": "J10",
@@ -854,7 +854,6 @@ const DATA = {
    "name": "K10YG 一粒ダイヤモンドネックレス",
    "model": "761825",
    "price": "33,000円（公式取得）／38,500円（旧カード）",
-   "status": "見送り",
    "priceNote": "今回取得した型番761825は33,000円。旧カードとの同一性は未確定",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -879,7 +878,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "jewelry",
    "photoExtra": true,
-   "rank": 12
+   "rank": 12,
+   "check": "手持ちと重なりを確認"
   },
   {
    "id": "J13",
@@ -887,7 +887,6 @@ const DATA = {
    "name": "誕生花ジュエリー 7月ユリネックレス",
    "model": "",
    "price": "29,700円／カード57,200円",
-   "status": "条件付き",
    "priceNote": "今回取得した公式ページの掲載値（2026-09-17閲覧）",
    "notes": [],
    "features": "K10YG、ブルームーンストーン、ルビー。約8×9mmと紹介。",
@@ -913,7 +912,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "jewelry",
-   "rank": 6
+   "rank": 6,
+   "check": "誕生月・価格を確認"
   },
   {
    "id": "J19",
@@ -921,7 +921,6 @@ const DATA = {
    "name": "誕生花ジュエリー 9月リンドウ透かしネックレス",
    "model": "2515727",
    "price": "29,700円",
-   "status": "有力",
    "priceNote": "2026-09-20 に公式ページで確認（残りわずか）",
    "features": "K10YG、ブルーサファイヤ、ブルークォーツ。トップ約9.0×7.2mm、チェーン約40cm（アジャスターカン付き）。日本製。花言葉カード付きの専用ケース。",
    "reason": "9月生まれに合わせた誕生花シリーズ。J13（7月ユリ）の差し替え候補。誕生花と誕生石の両方を取り入れられる。",
@@ -949,7 +948,8 @@ const DATA = {
    "cat": "jewelry",
    "added": true,
    "photoExtra": true,
-   "rank": 1
+   "rank": 1,
+   "check": "好み・在庫を確認"
   },
   {
    "id": "J20",
@@ -957,7 +957,6 @@ const DATA = {
    "name": "誕生花ジュエリー 9月リンドウ透かしピアス",
    "model": "2514418",
    "price": "29,700円",
-   "status": "条件付き",
    "priceNote": "2026-09-20 に公式ページで確認",
    "features": "K10YG、ブルーサファイヤ（ポスト・キャッチはK18YG）。縦約6.4×横約6.7mm。",
    "reason": "手持ちのネックレスをそのまま使い、耳元に9月の意味を添えられる。",
@@ -985,7 +984,8 @@ const DATA = {
    "cat": "jewelry",
    "added": true,
    "photoExtra": true,
-   "rank": 3
+   "rank": 3,
+   "check": "ピアス穴を確認"
   },
   {
    "id": "J21",
@@ -993,7 +993,6 @@ const DATA = {
    "name": "［セカンドピアス］Ptブルーサファイヤピアス",
    "model": "3873860",
    "price": "29,700円",
-   "status": "有力",
    "priceNote": "2026-09-20 に公式ページで確認（残りわずか）",
    "features": "プラチナ900、ブルーサファイヤ。縦横約3.0mm。8本爪で石を留めたスタッド。",
    "reason": "モチーフを抑えた9月の誕生石。手持ちの装いに青を少し足す脇役として選びやすい。",
@@ -1022,7 +1021,8 @@ const DATA = {
    "cat": "jewelry",
    "added": true,
    "photoExtra": true,
-   "rank": 2
+   "rank": 2,
+   "check": "ピアス穴・地金の好みを確認"
   },
   {
    "id": "J22",
@@ -1030,7 +1030,6 @@ const DATA = {
    "name": "K10YG ティールサファイアネックレス｜Plume Muse",
    "model": "309N0451-TY",
    "price": "29,700円",
-   "status": "要確認",
    "priceNote": "2026-09-20 に公式ページで確認（数量限定・売り切れ）",
    "features": "K10YG、ティールサファイア。スクエアカットの石を粒飾りの石座で縁取り。トップ約5.5×5.0mm（バチカン含む）、チェーン全長40cm（3cm下アジャスター）。",
    "reason": "定番の白い石とは違う、青緑の色と造形を楽しむ選択肢。",
@@ -1058,7 +1057,8 @@ const DATA = {
    "cat": "jewelry",
    "added": true,
    "photoExtra": true,
-   "rank": 9
+   "rank": 9,
+   "check": "在庫を確認"
   },
   {
    "id": "J23",
@@ -1066,7 +1066,6 @@ const DATA = {
    "name": "K10 サファイヤ スターレット バースストーンネックレス（YG）",
    "model": "1644727",
    "price": "28,600円",
-   "status": "条件付き",
    "priceNote": "2026-09-20 に公式ページで確認（残りわずか）",
    "features": "K10YG、サファイヤ。トップ約4.5×3.8mm、チェーン約40cm（アジャスターカン付き）。",
    "reason": "花モチーフを避けつつ、9月の青い石そのものを小さく楽しむ形。重ね着けにも使える大きさ。",
@@ -1094,7 +1093,8 @@ const DATA = {
    "cat": "jewelry",
    "added": true,
    "photoExtra": true,
-   "rank": 5
+   "rank": 5,
+   "check": "手持ちと重なり・在庫を確認"
   },
   {
    "id": "J24",
@@ -1102,7 +1102,6 @@ const DATA = {
    "name": "［プレシャスシングス］K10YG サファイア チャーム／Star",
    "model": "706076",
    "price": "25,300円",
-   "status": "要確認",
    "priceNote": "2026-09-20 に公式ページで確認（在庫なし・再入荷リクエスト受付）",
    "features": "K10YG（ニッケルフリー）、サファイア。星形のチャーム単体で、チェーンは付属しない。公式にmm表記なし。",
    "reason": "主役は手持ちに譲り、誕生石の小さな要素だけを足す考え方に合う。",
@@ -1129,7 +1128,8 @@ const DATA = {
    "cat": "jewelry",
    "added": true,
    "photoExtra": true,
-   "rank": 10
+   "rank": 10,
+   "check": "在庫・チェーン適合を確認"
   },
   {
    "id": "J25",
@@ -1137,7 +1137,6 @@ const DATA = {
    "name": "K10 クンツァイト ネックレス",
    "model": "63-3800",
    "price": "29,700円",
-   "status": "条件付き",
    "priceNote": "2026-09-20 に公式ページで確認（在庫あり）",
    "features": "K10YG、クンツァイト。最大幅 約5.0×5.5mm、チェーン40cm。ジュエリーボックス付き。",
    "reason": "9月のもう一つの誕生石。青ではなく、紫を帯びた淡いピンクを選びたい場合に。",
@@ -1165,7 +1164,8 @@ const DATA = {
    "cat": "jewelry",
    "added": true,
    "photoExtra": true,
-   "rank": 4
+   "rank": 4,
+   "check": "石の色の好みを確認"
   },
   {
    "id": "J15",
@@ -1173,7 +1173,6 @@ const DATA = {
    "name": "K18YG アコヤ真珠ピアス 7.5mm",
    "model": "RPE951-002",
    "price": "30,000円",
-   "status": "条件付き",
    "priceNote": "今回取得した公式ページの掲載値（2026-09-17閲覧）",
    "notes": [],
    "features": "一粒アコヤ真珠、K18YG。",
@@ -1200,7 +1199,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "jewelry",
-   "rank": 7
+   "rank": 7,
+   "check": "ピアス穴・手持ちと重なりを確認"
   },
   {
    "id": "J16",
@@ -1208,7 +1208,6 @@ const DATA = {
    "name": "プラチナアコヤ真珠ピアス（7.5mm）",
    "model": "RPE182",
    "price": "30,000円",
-   "status": "要確認",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）",
@@ -1239,7 +1238,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "jewelry",
    "photoExtra": true,
-   "rank": 8
+   "rank": 8,
+   "check": "特別価格の扱いを確認"
   },
   {
    "id": "B01",
@@ -1247,7 +1247,6 @@ const DATA = {
    "name": "アリーナH＋ 10×21WP",
    "model": "",
    "price": "13,200円",
-   "status": "旧候補",
    "priceNote": "今回取得したビクセン公式店の掲載値。実売店の価格は未更新",
    "notes": [],
    "features": "10倍／21mm／195g／実視界5.2°。",
@@ -1273,7 +1272,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": false,
-   "cat": "binocular"
+   "cat": "binocular",
+   "check": "実機で見え方を確認"
   },
   {
    "id": "B02",
@@ -1281,7 +1281,6 @@ const DATA = {
    "name": "アリーナH＋ 8×21WP",
    "model": "",
    "price": "過去カード8,690円",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はピンク（5色あり）"
@@ -1310,7 +1309,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "binocular",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "仕様を確認"
   },
   {
    "id": "B03",
@@ -1318,7 +1318,6 @@ const DATA = {
    "name": "コールマン H8×25",
    "model": "",
    "price": "11,990円",
-   "status": "旧候補",
    "priceNote": "今回取得したビクセン公式店の掲載値。実売店の価格は未更新",
    "notes": [],
    "features": "8倍／25mm／300g／実視界6.3°。",
@@ -1344,7 +1343,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": false,
-   "cat": "binocular"
+   "cat": "binocular",
+   "check": "実機で見え方を確認"
   },
   {
    "id": "B04",
@@ -1352,7 +1352,6 @@ const DATA = {
    "name": "アトレックII HR8×32WP",
    "model": "",
    "price": "34,100円（メーカー希望）／33,000円（公式店取得）",
-   "status": "旧候補",
    "priceNote": "メーカー・公式店で取得値に差あり。旧実売目安19,000〜24,000円は未更新",
    "notes": [],
    "features": "8倍／32mm／390g／実視界7.5°／ひとみ径4mm。",
@@ -1378,7 +1377,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": false,
-   "cat": "binocular"
+   "cat": "binocular",
+   "check": "重さを確認"
   },
   {
    "id": "B05",
@@ -1386,7 +1386,6 @@ const DATA = {
    "name": "アトレックII HR10×32WP",
    "model": "",
    "price": "35,200円",
-   "status": "旧候補",
    "priceNote": "今回取得したビクセン公式店の掲載値。実売店の価格は未更新",
    "notes": [],
    "features": "10倍／32mm／390g／実視界6.0°。",
@@ -1412,7 +1411,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": false,
-   "cat": "binocular"
+   "cat": "binocular",
+   "check": "手ブレ・重さを試用"
   },
   {
    "id": "B06",
@@ -1420,7 +1420,6 @@ const DATA = {
    "name": "アトレックII HR10×25WP",
    "model": "",
    "price": "過去カード21,599円",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -1449,7 +1448,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "binocular",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "仕様を確認"
   },
   {
    "id": "B07",
@@ -1457,7 +1457,6 @@ const DATA = {
    "name": "APEX J HR8×32WP",
    "model": "",
    "price": "過去カード32,817円",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -1486,7 +1485,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "binocular",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "実機で見え方を確認"
   },
   {
    "id": "B08",
@@ -1494,7 +1494,6 @@ const DATA = {
    "name": "ウルトラビューEXコンパクト 8×32",
    "model": "",
    "price": "33,000円（メーカー希望）／旧実売25,000〜28,000円",
-   "status": "旧候補",
    "priceNote": "公式希望小売価格30,000円・税別を確認。旧実売価格は未更新",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -1519,7 +1518,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "binocular",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "実機で見え方を確認"
   },
   {
    "id": "B09",
@@ -1527,7 +1527,6 @@ const DATA = {
    "name": "ウルトラビューEXコンパクト 10×32",
    "model": "",
    "price": "過去実売約2.9〜3.5万円",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -1552,7 +1551,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "binocular",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "眼幅・見口を試用"
   },
   {
    "id": "B10",
@@ -1560,7 +1560,6 @@ const DATA = {
    "name": "PROSTAFF P7 10×30",
    "model": "",
    "price": "23,100円（過去実売約2.1万円〜）",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -1589,7 +1588,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "binocular",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "重さを確認"
   },
   {
    "id": "B12",
@@ -1597,7 +1597,6 @@ const DATA = {
    "name": "SW 8×25WP",
    "model": "",
    "price": "35,200円",
-   "status": "旧候補",
    "priceNote": "今回取得したビクセン公式店の掲載値。実売店の価格は未更新",
    "notes": [],
    "features": "8倍／25mm／333g／実視界9.4°／アイレリーフ18.3mm。",
@@ -1623,7 +1622,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": false,
-   "cat": "binocular"
+   "cat": "binocular",
+   "check": "眼幅・見口を試用"
   },
   {
    "id": "B13",
@@ -1631,7 +1631,6 @@ const DATA = {
    "name": "SW 10×25WP",
    "model": "",
    "price": "37,400円",
-   "status": "旧候補",
    "priceNote": "今回取得したビクセン公式店の掲載値。実売店の価格は未更新",
    "notes": [],
    "features": "10倍／25mm／333g／実視界7.5°／アイレリーフ17.3mm。",
@@ -1657,7 +1656,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": false,
-   "cat": "binocular"
+   "cat": "binocular",
+   "check": "実機で見え方を確認"
   },
   {
    "id": "B17",
@@ -1665,7 +1665,6 @@ const DATA = {
    "name": "VC Smart 防振双眼鏡（型番未記載）",
    "model": "",
    "price": "過去カード39,390円",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：単体・人物の着用／使用例とも未取得。下記の参照ページをご確認ください。",
@@ -1692,7 +1691,8 @@ const DATA = {
    "images": {},
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "binocular"
+   "cat": "binocular",
+   "check": "同じ機種か確認"
   },
   {
    "id": "L01",
@@ -1700,7 +1700,6 @@ const DATA = {
    "name": "Experience 2",
    "model": "",
    "price": "4,990円→5,290円と記載",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はブラック（色違いあり・価格は同じ）"
@@ -1724,7 +1723,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "live",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "耳栓（イヤホンではない）"
   },
   {
    "id": "L02",
@@ -1732,7 +1732,6 @@ const DATA = {
    "name": "Experience 2 Plus",
    "model": "",
    "price": "6,890円",
-   "status": "旧候補",
    "priceNote": "今回取得した公式ページの掲載値（2026-09-17閲覧）",
    "notes": [
     "公式掲載の装着例。医療的効果や個人のフィットを保証する写真ではない。"
@@ -1759,7 +1758,8 @@ const DATA = {
    },
    "wearLabel": "着用参考（別色）",
    "hasWearPhoto": true,
-   "cat": "live"
+   "cat": "live",
+   "check": "フィットを確認"
   },
   {
    "id": "F01",
@@ -1767,7 +1767,6 @@ const DATA = {
    "name": "YURI ペンライトチャーム",
    "model": "Born to Bloom ペンライトチャーム",
    "price": "2,000円",
-   "status": "見送り",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はHANA公式サイトのグッズ告知画像から切り出し（販売ページは終了）"
@@ -1795,7 +1794,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "official",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "所有状況を確認"
   },
   {
    "id": "F02",
@@ -1803,7 +1803,6 @@ const DATA = {
    "name": "YURI ティッシュボックスケース",
    "model": "HANA MEMBERS COLLECTION Tissue Box Case by YURI",
    "price": "5,500円",
-   "status": "見送り",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -1831,7 +1830,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "official",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "所有状況を確認"
   },
   {
    "id": "F03",
@@ -1839,7 +1839,6 @@ const DATA = {
    "name": "HANA公式ペンライト",
    "model": "HANA OFFICIAL LIGHT STICK",
    "price": "6,000円",
-   "status": "見送り",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はHANA公式サイトの告知画像（イメージ）"
@@ -1867,7 +1866,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "official",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "所有状況を確認"
   },
   {
    "id": "F04",
@@ -1875,7 +1875,6 @@ const DATA = {
    "name": "HANA ペンライトバッグ",
    "model": "HANA ペンライトバッグ",
    "price": "3,800円",
-   "status": "見送り",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はHANA公式サイトのグッズ告知画像から切り出し（販売ページは終了）"
@@ -1903,7 +1902,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "official",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "所有状況を確認"
   },
   {
    "id": "F05",
@@ -1911,7 +1911,6 @@ const DATA = {
    "name": "Born to Bloom カードケース",
    "model": "Born to Bloom カードケース",
    "price": "2,200円",
-   "status": "見送り",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はHANA公式サイトのグッズ告知画像から切り出し（販売ページは終了）"
@@ -1939,7 +1938,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "official",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "所有状況を確認"
   },
   {
    "id": "F06",
@@ -1947,7 +1947,6 @@ const DATA = {
    "name": "ランダムフォトカード",
    "model": "HANA ランダムフォトカード",
    "price": "500円",
-   "status": "見送り",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はHANA公式サイトのグッズ告知画像から切り出し（販売ページは終了）"
@@ -1975,7 +1974,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "official",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "所有状況を確認"
   },
   {
    "id": "F07",
@@ -1983,7 +1983,6 @@ const DATA = {
    "name": "2026年9月号（YURI表紙と紹介）",
    "model": "",
    "price": "800円",
-   "status": "要確認",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -2012,7 +2011,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "official",
    "photoExtra": true,
-   "itemLabel": "表紙"
+   "itemLabel": "表紙",
+   "check": "号・発売日を確認"
   },
   {
    "id": "D01",
@@ -2020,7 +2020,6 @@ const DATA = {
    "name": "SoundLink Flex 第2世代",
    "model": "",
    "price": "19,800円",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真はデュードロップミント（色違いあり）"
@@ -2049,7 +2048,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "daily",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "手持ちと重なりを確認"
   },
   {
    "id": "D02",
@@ -2057,7 +2057,6 @@ const DATA = {
    "name": "SELPHY QX20",
    "model": "",
    "price": "22,000円",
-   "status": "旧候補",
    "priceNote": "今回取得した公式ページの掲載値（2026-09-17閲覧）",
    "notes": [
     "人が手に持つ公式使用例。装着する商品ではない。"
@@ -2085,7 +2084,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "daily"
+   "cat": "daily",
+   "check": "印刷する習慣を確認"
   },
   {
    "id": "D03",
@@ -2093,7 +2093,6 @@ const DATA = {
    "name": "シルク100％パジャマ",
    "model": "",
    "price": "38,500円〜",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）。写真は公式ページの初期表示の色（色違いあり）"
@@ -2122,7 +2121,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "daily",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "品番・サイズを確認"
   },
   {
    "id": "D04",
@@ -2130,7 +2130,6 @@ const DATA = {
    "name": "REBIVE MINI XS2",
    "model": "",
    "price": "14,960円",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -2154,7 +2153,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "daily",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "使用上の注意を確認"
   },
   {
    "id": "D05",
@@ -2162,7 +2162,6 @@ const DATA = {
    "name": "背中用アーム（XS2用として紹介）",
    "model": "",
    "price": "3,960円",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -2191,7 +2190,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "daily",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "適合機種を確認"
   },
   {
    "id": "D06",
@@ -2199,7 +2199,6 @@ const DATA = {
    "name": "Kindle Paperwhite",
    "model": "",
    "price": "約28,000円〜",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -2228,7 +2227,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "daily",
-   "photoExtra": true
+   "photoExtra": true,
+   "check": "世代・容量を確認"
   },
   {
    "id": "D07",
@@ -2236,7 +2236,6 @@ const DATA = {
    "name": "カスタム革小物",
    "model": "",
    "price": "1万〜3万円の企画目安",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -2265,7 +2264,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "daily",
    "photoExtra": true,
-   "itemLabel": "作例：2つ折りミニ財布（色の組み合わせは自由）"
+   "itemLabel": "作例：2つ折りミニ財布（色の組み合わせは自由）",
+   "check": "贈る品を決める必要あり"
   },
   {
    "id": "E01",
@@ -2273,7 +2273,6 @@ const DATA = {
    "name": "フェイシャル60分 ギフト券",
    "model": "",
    "price": "29,900円",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -2298,7 +2297,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "experience",
    "photoExtra": true,
-   "itemLabel": "ギフト券"
+   "itemLabel": "ギフト券",
+   "check": "予約・有効期限を確認"
   },
   {
    "id": "E03",
@@ -2306,7 +2306,6 @@ const DATA = {
    "name": "オリジナル香水づくり体験",
    "model": "",
    "price": "2人1万〜2万円の企画目安",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -2331,7 +2330,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "experience",
    "photoExtra": true,
-   "itemLabel": "選べる香水ボトル"
+   "itemLabel": "選べる香水ボトル",
+   "check": "料金を確認"
   },
   {
    "id": "E04",
@@ -2339,7 +2339,6 @@ const DATA = {
    "name": "陶芸・ガラス等の制作体験",
    "model": "",
    "price": "2人1万〜2万円の企画目安",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -2364,7 +2363,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "experience",
    "photoExtra": true,
-   "itemLabel": "陶芸体験で作った器"
+   "itemLabel": "陶芸体験で作った器",
+   "check": "コースを確認"
   },
   {
    "id": "E05",
@@ -2372,7 +2372,6 @@ const DATA = {
    "name": "FOR2 体験ギフト",
    "model": "",
    "price": "9,570〜57,750円と紹介",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -2398,7 +2397,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "experience",
    "photoExtra": true,
-   "itemLabel": "FOR2ギフトのパッケージ"
+   "itemLabel": "FOR2ギフトのパッケージ",
+   "check": "券種・有効期限を確認"
   },
   {
    "id": "E06",
@@ -2406,7 +2406,6 @@ const DATA = {
    "name": "花の定期便",
    "model": "",
    "price": "スレッドに具体額なし",
-   "status": "旧候補",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
@@ -2432,15 +2431,15 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "experience",
    "photoExtra": true,
-   "itemLabel": "定期便の花"
+   "itemLabel": "定期便の花",
+   "check": "受け取りの負担を確認"
   },
   {
    "id": "E07",
    "brand": "伊勢志摩旅行",
    "name": "旅行を誕生日仕様にする案",
    "model": "",
-   "price": "追加予算は未確定",
-   "status": "旧候補",
+   "price": "追加の費用は未確定",
    "priceNote": "スレッド記載価格／最新価格は未照合",
    "notes": [
     "写真：特定プランの写真は未取得。装着写真は対象外。会場・提供内容は参照先で確認。"
@@ -2456,7 +2455,8 @@ const DATA = {
    "images": {},
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "experience"
+   "cat": "experience",
+   "check": "予約・対応を確認"
   }
  ],
  "binocularCompare": [
@@ -2524,7 +2524,7 @@ const DATA = {
     "インナーイヤホン・上質なイヤホン",
     "未設定。機種は提案されていない。Loopは再生機能のあるイヤホンではない。",
     "ケーキ・誕生日ディナー・手書きカード・ミニアルバム",
-    "食事10,000〜20,000円等、複数の予算案。物に添える演出。店・花店・ケーキの予約は確定していない。",
+    "食事10,000〜20,000円等の案。物に添える演出。店・花店・ケーキの予約は確定していない。",
     "高級ボールペン・聴診器・仕事用IDケース",
     "未設定／当時は優先度低め。誕生日まで仕事を連想させる可能性を検討。具体的モデルはなし。",
     "美容家電・スキンケア・ブランド財布／バッグ",
@@ -2537,7 +2537,6 @@ const DATA = {
    "label": "APPENDIX B",
    "title": "ブランドの見方と、参考として出た品名",
    "paras": [
-    "この章はスレッドでの位置づけを整理したものです。収入からブランドの適否を数値化したり、客観的な序列を作ったりするものではありません。",
     "ALEXANDRE DE PARIS",
     "ヘアアクセサリー専門の高級ブランドとして検討。樹脂系と布系で製造・手入れ条件が異なる。",
     "ブランド参照先",
@@ -2548,7 +2547,7 @@ const DATA = {
     "髪飾りの造形・デザインを選ぶ理由にする方向。今回の黒いポニーカフもここに該当。",
     "ブランド参照先",
     "THBT／LETICIA",
-    "ブランド名の権威より、甘さを抑えた形や色で選ぶ方向。",
+    "甘さを抑えた形や色で選ぶ方向。",
     "ブランド参照先",
     "France Luxe",
     "日常のまとめ髪を上質にする比較先。個々のクリップの大きさと髪量への適合が大切。",
@@ -2563,14 +2562,11 @@ const DATA = {
     "主役のジュエリーと比べるのではなく、形や用途の違うイヤーカフ／ブローチを足す方向。",
     "ブランド参照先",
     "Hermès",
-    "スカーフ関連は既存の小物の使い方を広げる案。ブランドだけで、使わない道具を選ばない。",
+    "スカーフ関連は既存の小物の使い方を広げる案。",
     "ブランド参照先",
     "Vendome Aoyama／va／Vendome Boutique",
-    "別ブランドとして区別。顧客年収の信頼できる公開データは、このスレッドでは示されていない。",
-    "ブランド参照先",
-    "参考品名であり、今回の購入候補ではないもの",
-    "カルティエのトリニティ、ラブブレス、ジュスト アン クル、シャネルのココ クラッシュは、他者の装いを紹介する記事の中で言及されたものです。本人がこれらの全モデルを所有しているという意味ではありません。サイズ・素材・型番が不明なので、価格や実物写真は特定していません。",
-    "ヴァンドーム青山「キャトル」の82,500円・158,400円・374,000円・715,000円という価格例も、ブランド内の価格帯を示す参考でした。個々の型番は未特定です。HomePod、Bose／JBLのスピーカー、iPad、iPhoneは所有確認や比較の文脈での言及で、特定の購入モデルではありません。"
+    "別ブランドとして区別。",
+    "ブランド参照先"
    ]
   },
   {
@@ -2587,7 +2583,7 @@ const DATA = {
     "アレクサンドルの使い分け2点　34,100円",
     "APY-78（15,400）＋BASIC CLASSIQUES M（18,700）。両方使う習慣がある場合のみ。",
     "エルメスのスカーフ＋リング　72,600円",
-    "ツイリー（40,700）＋ミニ・モール（31,900）。今回の3万円程度という予算からは外れる。",
+    "ツイリー（40,700）＋ミニ・モール（31,900）。",
     "ライブ用品＋食事／花　総額25,000〜50,000円程度の複数案",
     "時点により耳栓が通常版／Plus、双眼鏡が8倍／10倍と変わるため、総額は統合していない。",
     "スパ＋YURI小物＋花　約34,000〜40,000円の案",
@@ -2595,15 +2591,14 @@ const DATA = {
     "購入前チェック",
     "適合  髪量・髪の長さ・普段の留め方／金属アレルギー／耳の形／ピアス穴を確認。分からない情報を推測で埋めない。",
     "運用  院内ルール、手術帽との干渉、洗濯や清拭の可否、装飾の引っ掛かりを確認。",
-    "購入  税込価格と送料・包装、色・型番・数量、公式／正規販売店、修理窓口、納期を確認。",
-    "贈り方  値段やブランド序列ではなく「いつもの結び目に添えられると思って」と選定理由を伝える。"
+    "購入  税込価格と送料・包装、色・型番・数量、公式／正規販売店、修理窓口、納期を確認。"
    ]
   },
   {
    "label": "APPENDIX D",
    "title": "写真・情報の確認状況",
    "paras": [
-    "収録商品・シリーズ・体験：69項目（予算の上限 40,000円以上の16項目は外した）。docx 作成時点で単体写真を収録したものは29商品、人物の着用・使用例を収録したものは16商品です。ほかに単体写真を持つ商品でも、人物写真は未取得のものがあります。",
+    "収録商品・シリーズ・体験：69項目。docx 作成時点で単体写真を収録したものは29商品、人物の着用・使用例を収録したものは16商品です。ほかに単体写真を持つ商品でも、人物写真は未取得のものがあります。",
     "写真を2種類とも収録した商品",
     "H01、H02、H03、H04、H05、H06、H10、H11、H12、J02、J03、J13、J15、L02、D02",
     "単体写真のみ収録した商品",

@@ -26,8 +26,7 @@ const TABS = [
   { key: "fav", label: "★まとめ", panel: "fav" },
   { key: "appendix", label: "付録", panel: "appendix" }
 ];
-const STATUS_ORDER = ["本命", "有力", "条件付き", "要確認", "未特定", "予算外", "見送り", "旧候補"];
-const STATUS_CLASS = { "本命": "s-top", "有力": "s-strong", "条件付き": "s-cond", "要確認": "s-check", "未特定": "s-unk", "予算外": "s-over", "見送り": "s-pass", "旧候補": "s-old" };
+/* 古い評価ラベルは公開しない。各カードには「確認」（買う前に確かめたいこと）を出す */
 const PRICE_BANDS = [
   { key: "lt15", label: "〜1.5万円", test: p => p !== null && p < 15000 },
   { key: "15to30", label: "1.5〜3万円", test: p => p !== null && p >= 15000 && p < 30000 },
@@ -38,7 +37,6 @@ const PRICE_BANDS = [
 const SORTS = [
   { key: "rec", label: "おすすめ順" },   // rank のある商品（ヘア）を順位で。無い商品は掲載順
   { key: "id", label: "掲載順" },
-  { key: "status", label: "評価順" },
   { key: "priceAsc", label: "価格が安い順" },
   { key: "priceDesc", label: "価格が高い順" },
   { key: "want", label: "★が多い順" }
@@ -74,8 +72,8 @@ function parsePrice(text) {
 const PRICE = Object.fromEntries(ITEMS.map(it => [it.id, parsePrice(it.price)]));
 
 /* ---------- 状態 ---------- */
-const ui = Object.assign({ tab: "guide", status: [], band: [], use: [], starred: false, sort: "rec", view: "cards", tryon: "red", v: 2 }, readLS(UI_KEY, {}));
-if (!(ui.v >= 2)) { ui.sort = "rec"; ui.v = 2; }   // 以前に保存した並び替え（掲載順）を、おすすめ順の既定に一度だけ揃える
+const ui = Object.assign({ tab: "guide", check: [], band: [], use: [], starred: false, sort: "rec", view: "cards", tryon: "red", v: 3 }, readLS(UI_KEY, {}));
+if (!(ui.v >= 3)) { ui.sort = "rec"; ui.check = []; delete ui.status; ui.v = 3; }   // 以前の端末に残った並び替え・評価の絞り込みを一度だけ揃える
 let shared = Object.assign({ want: {}, note: {}, members: {} }, readLS(CACHE_KEY, {}));
 let myUid = "";
 let myEmail = "";   // ログイン中のアカウントのメールアドレス（Firebase から受け取るだけで、ファイルには書かない）
@@ -226,6 +224,34 @@ function clearAllMyWants() {
   refreshSocialAll();
   ids.forEach(id => writeShared(`want/${myUid}/${id}`, null));
 }
+/* メモを書いている間の取り違えを防ぐ：書き始めた時点の内容を覚えておく */
+let noteEdit = null;
+function noteSnapshot(id) { const n = getNote(id); return { id, text: n ? n.text : "", at: n ? n.at : 0, uid: n ? n.uid : "" }; }
+function beginNote(id, el) { noteEdit = Object.assign(noteSnapshot(id), { el: el || null }); }
+/* 書いている途中に相手が更新したかどうか */
+function noteChangedByOther(id) {
+  if (!noteEdit || noteEdit.id !== id) return false;
+  const n = getNote(id);
+  return (n ? n.text : "") !== noteEdit.text && (!n || n.uid !== myUid);
+}
+function endNote(id, text, el) {
+  const t = String(text || "").slice(0, NOTE_MAX);
+  const started = noteEdit && noteEdit.id === id && (!el || !noteEdit.el || noteEdit.el === el) ? noteEdit : null;
+  noteEdit = null;
+  // 書き始めの記録が無いときは保存しない（古い内容で相手の更新を上書きしないため）
+  if (!started) { refreshSocial(id); return; }
+  // 自分が書き換えていないなら、何も保存しない
+  if (t === started.text) { refreshSocial(id); return; }
+  if (noteChangedByOtherSnapshot(started, id)) {
+    if (!confirm("このメモは、書いている間に相手が更新しました。自分の内容で上書きしますか？\n（キャンセルすると相手の内容に戻します）")) { refreshSocial(id); return; }
+  }
+  setNote(id, t);
+}
+function noteChangedByOtherSnapshot(started, id) {
+  if (!started) return false;
+  const n = getNote(id);
+  return (n ? n.text : "") !== started.text && (!n || n.uid !== myUid);
+}
 function setNote(id, text) {
   if (!canEdit() || !BY_ID[id]) return;
   const t = String(text || "").slice(0, NOTE_MAX);
@@ -249,9 +275,18 @@ function renderTabs() {
     return `<button type="button" role="tab" class="tab${ui.tab === t.key ? " active" : ""}" data-tab="${t.key}" aria-selected="${ui.tab === t.key}">${esc(t.label)}${c !== "" && t.key !== "guide" && t.key !== "appendix" ? `<span class="tab-count">${c}</span>` : ""}</button>`;
   }).join("");
 }
+function clearFilters() { ui.check = []; ui.band = []; ui.use = []; ui.starred = false; }
+/* この章に無い絞り込み条件は、画面に出ないまま0件の原因になるので外す */
+function pruneFilters() {
+  const here = ITEMS.filter(it => it.cat === ui.tab);
+  if (!here.length) return;
+  ui.check = ui.check.filter(c => here.some(it => it.check === c));
+  ui.band = ui.band.filter(k => here.some(it => (PRICE_BANDS.find(b => b.key === k) || { test: () => false }).test(PRICE[it.id])));
+  ui.use = ui.use.filter(u => here.some(it => (it.use || []).includes(u)));
+}
 function showTab(key, scrollId) {
   if (!TABS.some(t => t.key === key)) key = "guide";
-  ui.tab = key; saveUI();
+  ui.tab = key; pruneFilters(); saveUI();
   renderAll();
   if (scrollId) {
     const el = document.getElementById("item-" + scrollId);
@@ -260,7 +295,7 @@ function showTab(key, scrollId) {
 }
 
 /* ---------- 描画：カード ---------- */
-function statusBadge(s) { return `<span class="badge ${STATUS_CLASS[s] || ""}">${esc(s || "—")}</span>`; }
+function checkBadge(it) { return it.check ? `<span class="badge check">確認：${esc(it.check)}</span>` : ""; }
 function rankBadge(it) { return it.rank ? `<span class="badge rank${it.rank <= 3 ? " top" : ""}">おすすめ ${it.rank}位</span>` : ""; }
 function galleryImages(it) {
   const list = [];
@@ -328,9 +363,9 @@ function cardHTML(it) {
   const rows = [["特徴", it.features], ["おすすめ理由", it.reason], ["注意点", it.caution]]
     .filter(r => r[1]).map(r => `<dt>${r[0]}</dt><dd>${esc(r[1])}</dd>`).join("");
   const links = (it.links || []).map(l => `<a class="pill" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label)} ↗</a>`).join("");
-  return `<article class="card ${STATUS_CLASS[it.status] || ""}" id="item-${it.id}" data-id="${it.id}">
+  return `<article class="card" id="item-${it.id}" data-id="${it.id}">
     <header class="card-head">
-      <div class="card-meta"><span class="card-id">${it.id}</span><span class="brand">${esc(it.brand)}</span>${rankBadge(it)}${statusBadge(it.status)}</div>
+      <div class="card-meta"><span class="card-id">${it.id}</span><span class="brand">${esc(it.brand)}</span>${rankBadge(it)}${checkBadge(it)}</div>
       <h3>${esc(it.name)}</h3>
       ${it.model ? `<p class="model">品番・型番：${esc(it.model)}</p>` : ""}
       <p class="price">${esc(it.price)}<small>${esc(it.priceNote)}</small></p>
@@ -348,7 +383,7 @@ function cardHTML(it) {
 function itemsOfTab() { return ITEMS.filter(it => it.cat === ui.tab); }
 function applyFilters(list) {
   return list.filter(it =>
-    (!ui.status.length || ui.status.includes(it.status)) &&
+    (!ui.check.length || ui.check.includes(it.check)) &&
     (!ui.band.length || PRICE_BANDS.some(b => ui.band.includes(b.key) && b.test(PRICE[it.id]))) &&
     (!ui.use.length || (it.use || []).some(u => ui.use.includes(u))) &&
     (!ui.starred || wantTotal(it.id) > 0));
@@ -359,7 +394,6 @@ function sortItems(list, key) {
   const cmp = {
     id: (a, b) => idx(a.id) - idx(b.id),
     rec: (a, b) => (a.rank || Infinity) - (b.rank || Infinity) || idx(a.id) - idx(b.id),
-    status: (a, b) => STATUS_ORDER.indexOf(a.status) - STATUS_ORDER.indexOf(b.status) || idx(a.id) - idx(b.id),
     priceAsc: (a, b) => price(a.id, 1) - price(b.id, 1) || idx(a.id) - idx(b.id),
     priceDesc: (a, b) => price(a.id, -1) - price(b.id, -1) || idx(a.id) - idx(b.id),
     want: (a, b) => wantTotal(b.id) - wantTotal(a.id) || idx(a.id) - idx(b.id)
@@ -370,28 +404,28 @@ function chip(group, value, label, on, count) {
   return `<button type="button" class="chip${on ? " on" : ""}" data-filter="${group}" data-value="${esc(value)}">${esc(label)}${count !== undefined ? `<span class="chip-n">${count}</span>` : ""}</button>`;
 }
 function renderToolbar(all) {
-  const statuses = STATUS_ORDER.filter(s => all.some(it => it.status === s));
+  const checks = [...new Set(all.map(it => it.check).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ja"));
   const bands = PRICE_BANDS.filter(b => all.some(it => b.test(PRICE[it.id])));
   const uses = [...new Set(all.flatMap(it => it.use || []))];
   const group = (title, html) => html ? `<div class="tool-row"><span class="tool-label">${title}</span><div class="chips">${html}</div></div>` : "";
   const tryonSwitch = ui.tab === "hair" ? `<div class="tool-row"><span class="tool-label">装着イメージ</span><div class="seg big">${TRYON_VARIANTS.map(v => `<button type="button" class="seg-btn${ui.tryon === v.key ? " on" : ""}" data-tryon="${v.key}">${esc(v.label)}</button>`).join("")}</div></div>` : "";
   $("#toolbar").innerHTML = `
     ${tryonSwitch}
-    ${group("評価", statuses.map(s => chip("status", s, s, ui.status.includes(s), all.filter(it => it.status === s).length)).join(""))}
+    ${checks.length > 1 ? group("確認", checks.map(c => chip("check", c, c, ui.check.includes(c), all.filter(it => it.check === c).length)).join("")) : ""}
     ${group("価格", bands.map(b => chip("band", b.key, b.label, ui.band.includes(b.key), all.filter(it => b.test(PRICE[it.id])).length)).join(""))}
     ${uses.length > 1 ? group("用途", uses.map(u => chip("use", u, u, ui.use.includes(u))).join("")) : ""}
     <div class="tool-row tool-end">
       ${chip("starred", "1", "★ありだけ", ui.starred)}
       <label class="sort">並び替え <select id="sort">${SORTS.map(s => `<option value="${s.key}"${ui.sort === s.key ? " selected" : ""}>${s.label}</option>`).join("")}</select></label>
       <div class="seg"><button type="button" class="seg-btn${ui.view === "cards" ? " on" : ""}" data-view="cards">カード</button><button type="button" class="seg-btn${ui.view === "table" ? " on" : ""}" data-view="table">一覧表</button></div>
-      ${ui.status.length || ui.band.length || ui.use.length || ui.starred ? `<button type="button" class="pill small" id="clear-filters">絞り込みを解除</button>` : ""}
+      ${ui.check.length || ui.band.length || ui.use.length || ui.starred ? `<button type="button" class="pill small" id="clear-filters">絞り込みを解除</button>` : ""}
     </div>`;
 }
 function tableHTML(list) {
   const rs = raters();
   const ranked = list.some(it => it.rank);
-  return `<div class="table-wrap"><table class="cmp"><thead><tr>${ranked ? "<th>おすすめ</th>" : ""}<th>ID</th><th>商品</th><th>価格</th><th>評価</th><th>用途</th>${rs.map(u => `<th>★${esc(memberName(u))}</th>`).join("")}<th>メモ</th></tr></thead><tbody>
-    ${list.map(it => `<tr data-goto="${it.id}" tabindex="0">${ranked ? `<td class="nowrap">${it.rank ? it.rank + "位" : "—"}</td>` : ""}<td class="mono">${it.id}</td><td><span class="muted small">${esc(it.brand)}</span><br>${esc(it.name)}</td><td class="nowrap">${esc(it.price)}</td><td>${statusBadge(it.status)}</td><td class="small">${esc((it.use || []).join("・"))}</td>${rs.map(u => `<td class="stars-cell">${"★".repeat(getWant(u, it.id)) || "—"}</td>`).join("")}<td class="small">${esc((getNote(it.id) || {}).text || "").slice(0, 40)}</td></tr>`).join("")}
+  return `<div class="table-wrap"><table class="cmp"><thead><tr>${ranked ? "<th>おすすめ</th>" : ""}<th>ID</th><th>商品</th><th>価格</th><th>確認</th><th>用途</th>${rs.map(u => `<th>★${esc(memberName(u))}</th>`).join("")}<th>メモ</th></tr></thead><tbody>
+    ${list.map(it => `<tr data-goto="${it.id}" tabindex="0">${ranked ? `<td class="nowrap">${it.rank ? it.rank + "位" : "—"}</td>` : ""}<td class="mono">${it.id}</td><td><span class="muted small">${esc(it.brand)}</span><br>${esc(it.name)}</td><td class="nowrap">${esc(it.price)}</td><td class="small">${esc(it.check || "")}</td><td class="small">${esc((it.use || []).join("・"))}</td>${rs.map(u => `<td class="stars-cell">${"★".repeat(getWant(u, it.id)) || "—"}</td>`).join("")}<td class="small">${esc((getNote(it.id) || {}).text || "").slice(0, 40)}</td></tr>`).join("")}
   </tbody></table></div>`;
 }
 function binocularCompare() {
@@ -422,11 +456,11 @@ function renderFav() {
 function renderGuide() {
   // おすすめ順のある章は上位5点ずつ。無ければ本命・有力
   const groups = (DATA.rankings || []).map(g => ({ title: (DATA.sections[g.cat] || {}).title || g.cat, list: sortItems(ITEMS.filter(it => it.cat === g.cat && it.rank), "rec").slice(0, 5) })).filter(g => g.list.length);
-  const blocks = groups.length ? groups : [{ title: "", list: sortItems(ITEMS.filter(it => it.status === "本命" || it.status === "有力"), "status") }];
+  const blocks = groups.length ? groups : [{ title: "", list: ITEMS.slice(0, 5) }];
   $("#guide-shortlist").innerHTML = blocks.map(g => `<h3>${g.title ? esc(g.title) + "のおすすめ 上位" + g.list.length : "現在の本命・有力"}</h3><div class="mini-list">${g.list.map(it => {
     const t = TRYON_MAP[it.id] || {};
     const img = t[ui.tryon] || it.images.item || "";
-    return `<a class="mini" href="#${it.id}" data-jump="${it.id}">${img ? `<img src="${esc(img)}" alt="" loading="lazy">` : ""}<span>${it.rank ? rankBadge(it) : statusBadge(it.status)} <b>${it.id}</b> ${esc(it.name)}<br><small>${esc(it.brand)}・${esc(it.price)}</small></span></a>`;
+    return `<a class="mini" href="#${it.id}" data-jump="${it.id}">${img ? `<img src="${esc(img)}" alt="" loading="lazy">` : ""}<span>${rankBadge(it)} <b>${it.id}</b> ${esc(it.name)}<br><small>${esc(it.brand)}・${esc(it.price)}</small></span></a>`;
   }).join("")}</div>`).join("");
 }
 function renderAppendix() {
@@ -452,7 +486,10 @@ function refreshSocial(id) {
   if (!box) return;
   const ta = box.querySelector("textarea");
   if (ta && document.activeElement === ta) {
+    // 入力中は本文を差し替えず、相手が更新したことだけ知らせる
     box.querySelector(".want").innerHTML = starsHTML(id);
+    const meta = box.querySelector(".note-meta");
+    if (meta) meta.innerHTML = noteChangedByOther(id) ? `<span class="warn">相手がこのメモを更新しました（保存時に確認します）</span>` : noteMeta(id);
     return;
   }
   box.innerHTML = socialHTML(BY_ID[id]);
@@ -485,7 +522,12 @@ function stepLightbox(d) { if (!lb.list.length) return; lb.i = (lb.i + d + lb.li
 
 /* ---------- イベント ---------- */
 function toggleIn(arr, v) { const i = arr.indexOf(v); if (i >= 0) arr.splice(i, 1); else arr.push(v); }
-function jumpTo(id) { const it = BY_ID[id]; if (it) showTab(it.cat, id); }
+function jumpTo(id) {
+  const it = BY_ID[id];
+  if (!it) return;
+  if (ui.view !== "cards") { ui.view = "cards"; saveUI(); }   // 一覧表から飛んでもカードが開くように
+  showTab(it.cat, id);
+}
 function bind() {
   document.addEventListener("click", e => {
     const t = e.target.closest("button, a, tr[data-goto]");
@@ -504,7 +546,7 @@ function bind() {
       if (g === "starred") ui.starred = !ui.starred; else toggleIn(ui[g], t.dataset.value);
       saveUI(); renderItems(); return;
     }
-    if (t.id === "clear-filters") { ui.status = []; ui.band = []; ui.use = []; ui.starred = false; saveUI(); renderItems(); return; }
+    if (t.id === "clear-filters") { clearFilters(); saveUI(); renderItems(); return; }
     if (t.id === "lb-close") closeLightbox();
     if (t.id === "lb-prev") stepLightbox(-1);
     if (t.id === "lb-next") stepLightbox(1);
@@ -521,11 +563,15 @@ function bind() {
     if (e.target.id === "sort") { ui.sort = e.target.value; saveUI(); renderItems(); }
   });
   // メモはフォーカスが外れたときに保存（1文字ごとに送らない）
+  document.addEventListener("focusin", e => {
+    const ta = e.target.closest && e.target.closest("textarea[data-note]");
+    if (ta && !ta.readOnly) beginNote(ta.dataset.note, ta);
+  });
   document.addEventListener("focusout", e => {
     const ta = e.target.closest && e.target.closest("textarea[data-note]");
     if (!ta || ta.readOnly) return;
-    setNote(ta.dataset.note, ta.value);
-    const meta = ta.parentElement.querySelector(".note-meta");
+    endNote(ta.dataset.note, ta.value, ta);
+    const meta = ta.parentElement && ta.parentElement.querySelector(".note-meta");
     if (meta) meta.innerHTML = noteMeta(ta.dataset.note);
   });
   window.addEventListener("hashchange", routeFromHash);
@@ -537,7 +583,7 @@ function routeFromHash() {
 }
 
 /* ---------- 起動 ---------- */
-window.Catalog = { onAuth, setStatus, clearCache, parsePrice, state: () => ({ ui, shared, myUid, syncState, unlocked }) };
+window.Catalog = { onAuth, setStatus, clearCache, parsePrice, beginNote, endNote, state: () => ({ ui, shared, myUid, syncState, unlocked }) };
 bind();
 if (location.hash) routeFromHash(); else renderAll();
 refreshStatus();
