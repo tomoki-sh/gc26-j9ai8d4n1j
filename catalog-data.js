@@ -19,7 +19,7 @@ const DATA = {
    "kicker": "アクセサリー検討初期の候補を保存",
    "title": "ネックレス・ピアス",
    "lead": [
-    "当初はシンプルなネックレスを推していましたが、手持ちのカルティエ等との重複が分かった後に優先順位を下げました。型番未特定だった商品は、公式ページで確認できた候補に置き換え（J08）、予算の上限以上のものは外しました。"
+    "当初はシンプルなネックレスを推していましたが、手持ちのカルティエ等との重複が分かった後に優先順位を下げました。型番未特定だった商品は、公式ページで確認できた候補に置き換え（J08）、予算の上限以上のものは外しました。J19〜J25 は、9月の誕生花（リンドウ）と誕生石（サファイヤ・クンツァイト）から 2026-09-20 に追加した候補です。"
    ]
   },
   "binocular": {
@@ -910,6 +910,251 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "jewelry"
+  },
+  {
+   "id": "J19",
+   "brand": "TAKE-UP",
+   "name": "誕生花ジュエリー 9月リンドウ透かしネックレス",
+   "model": "2515727",
+   "price": "29,700円",
+   "status": "有力",
+   "priceNote": "2026-09-20 に公式ページで確認（残りわずか）",
+   "features": "K10YG、ブルーサファイヤ、ブルークォーツ。トップ約9.0×7.2mm、チェーン約40cm（アジャスターカン付き）。日本製。花言葉カード付きの専用ケース。",
+   "reason": "9月生まれに合わせた誕生花シリーズ。J13（7月ユリ）の差し替え候補。誕生花と誕生石の両方を取り入れられる。",
+   "caution": "花モチーフが好みかを確認。青い石はすべてサファイヤではなく、ブルークォーツも含む。公式は残りわずか。",
+   "use": [
+    "休日",
+    "会食"
+   ],
+   "notes": [
+    "商品：docx 作成後に追加（2026-09-20）。9月の誕生花・誕生石の候補として調査。",
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
+   ],
+   "links": [
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.take-up.jp/products/detail5660"
+    }
+   ],
+   "images": {
+    "item": "images/products/J19_item.jpg",
+    "wear": "images/products/J19_wear.jpg"
+   },
+   "wearLabel": "",
+   "hasWearPhoto": true,
+   "cat": "jewelry",
+   "added": true,
+   "photoExtra": true
+  },
+  {
+   "id": "J20",
+   "brand": "TAKE-UP",
+   "name": "誕生花ジュエリー 9月リンドウ透かしピアス",
+   "model": "2514418",
+   "price": "29,700円",
+   "status": "条件付き",
+   "priceNote": "2026-09-20 に公式ページで確認",
+   "features": "K10YG、ブルーサファイヤ（ポスト・キャッチはK18YG）。縦約6.4×横約6.7mm。",
+   "reason": "手持ちのネックレスをそのまま使い、耳元に9月の意味を添えられる。",
+   "caution": "ピアス穴の有無と、普段ピアスを使うかを確認。約6.7mmで極小ではない。衛生商品のため返品対象外。",
+   "use": [
+    "休日",
+    "会食"
+   ],
+   "notes": [
+    "商品：docx 作成後に追加（2026-09-20）。9月の誕生花・誕生石の候補として調査。",
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
+   ],
+   "links": [
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.take-up.jp/products/detail5659"
+    }
+   ],
+   "images": {
+    "item": "images/products/J20_item.jpg",
+    "wear": "images/products/J20_wear.jpg"
+   },
+   "wearLabel": "",
+   "hasWearPhoto": true,
+   "cat": "jewelry",
+   "added": true,
+   "photoExtra": true
+  },
+  {
+   "id": "J21",
+   "brand": "TAKE-UP",
+   "name": "［セカンドピアス］Ptブルーサファイヤピアス",
+   "model": "3873860",
+   "price": "29,700円",
+   "status": "有力",
+   "priceNote": "2026-09-20 に公式ページで確認（残りわずか）",
+   "features": "プラチナ900、ブルーサファイヤ。縦横約3.0mm。8本爪で石を留めたスタッド。",
+   "reason": "モチーフを抑えた9月の誕生石。手持ちの装いに青を少し足す脇役として選びやすい。",
+   "caution": "約3mmと控えめで、箱を開けたときの華やかさは小さい。ピアス穴の有無と、白い地金の好みを確認。衛生商品のため返品対象外。",
+   "use": [
+    "通勤",
+    "休日",
+    "会食"
+   ],
+   "notes": [
+    "商品：docx 作成後に追加（2026-09-20）。9月の誕生花・誕生石の候補として調査。",
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
+   ],
+   "links": [
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.take-up.jp/products/detail6311"
+    }
+   ],
+   "images": {
+    "item": "images/products/J21_item.jpg",
+    "wear": "images/products/J21_wear.jpg"
+   },
+   "wearLabel": "",
+   "hasWearPhoto": true,
+   "cat": "jewelry",
+   "added": true,
+   "photoExtra": true
+  },
+  {
+   "id": "J22",
+   "brand": "sowi",
+   "name": "K10YG ティールサファイアネックレス｜Plume Muse",
+   "model": "309N0451-TY",
+   "price": "29,700円",
+   "status": "要確認",
+   "priceNote": "2026-09-20 に公式ページで確認（数量限定・売り切れ）",
+   "features": "K10YG、ティールサファイア。スクエアカットの石を粒飾りの石座で縁取り。トップ約5.5×5.0mm（バチカン含む）、チェーン全長40cm（3cm下アジャスター）。",
+   "reason": "定番の白い石とは違う、青緑の色と造形を楽しむ選択肢。",
+   "caution": "公式オンラインは売り切れ（2026-09-20時点）。数量限定・一点ものは再製作の対象外と案内。天然石のため色味に個体差。",
+   "use": [
+    "休日",
+    "会食"
+   ],
+   "notes": [
+    "商品：docx 作成後に追加（2026-09-20）。9月の誕生花・誕生石の候補として調査。",
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
+   ],
+   "links": [
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.sowi.jp/products/309n0451-ty-260907"
+    }
+   ],
+   "images": {
+    "item": "images/products/J22_item.jpg",
+    "wear": "images/products/J22_wear.jpg"
+   },
+   "wearLabel": "着用例（同シリーズのリングも着けた写真）",
+   "hasWearPhoto": true,
+   "cat": "jewelry",
+   "added": true,
+   "photoExtra": true
+  },
+  {
+   "id": "J23",
+   "brand": "TAKE-UP",
+   "name": "K10 サファイヤ スターレット バースストーンネックレス（YG）",
+   "model": "1644727",
+   "price": "28,600円",
+   "status": "条件付き",
+   "priceNote": "2026-09-20 に公式ページで確認（残りわずか）",
+   "features": "K10YG、サファイヤ。トップ約4.5×3.8mm、チェーン約40cm（アジャスターカン付き）。",
+   "reason": "花モチーフを避けつつ、9月の青い石そのものを小さく楽しむ形。重ね着けにも使える大きさ。",
+   "caution": "手持ちの定番ネックレスと使う場面が重なりやすい。公式は残りわずか。",
+   "use": [
+    "休日",
+    "通勤"
+   ],
+   "notes": [
+    "商品：docx 作成後に追加（2026-09-20）。9月の誕生花・誕生石の候補として調査。",
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
+   ],
+   "links": [
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.take-up.jp/products/detail5178"
+    }
+   ],
+   "images": {
+    "item": "images/products/J23_item.jpg",
+    "wear": "images/products/J23_wear.jpg"
+   },
+   "wearLabel": "",
+   "hasWearPhoto": true,
+   "cat": "jewelry",
+   "added": true,
+   "photoExtra": true
+  },
+  {
+   "id": "J24",
+   "brand": "ete bijoux",
+   "name": "［プレシャスシングス］K10YG サファイア チャーム／Star",
+   "model": "706076",
+   "price": "25,300円",
+   "status": "要確認",
+   "priceNote": "2026-09-20 に公式ページで確認（在庫なし・再入荷リクエスト受付）",
+   "features": "K10YG（ニッケルフリー）、サファイア。星形のチャーム単体で、チェーンは付属しない。公式にmm表記なし。",
+   "reason": "主役は手持ちに譲り、誕生石の小さな要素だけを足す考え方に合う。",
+   "caution": "公式オンラインは在庫なし（2026-09-20時点）。店舗在庫の確認が必要。手持ちのチェーンに通るか、重ねたときに傷つけ合わないかも要確認。",
+   "use": [
+    "休日"
+   ],
+   "notes": [
+    "商品：docx 作成後に追加（2026-09-20）。9月の誕生花・誕生石の候補として調査。",
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
+   ],
+   "links": [
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://www.eteweb.com/items/706076"
+    }
+   ],
+   "images": {
+    "item": "images/products/J24_item.jpg",
+    "wear": "images/products/J24_wear.jpg"
+   },
+   "wearLabel": "着用例（チェーンは参考商品）",
+   "hasWearPhoto": true,
+   "cat": "jewelry",
+   "added": true,
+   "photoExtra": true
+  },
+  {
+   "id": "J25",
+   "brand": "L&Co.",
+   "name": "K10 クンツァイト ネックレス",
+   "model": "63-3800",
+   "price": "29,700円",
+   "status": "条件付き",
+   "priceNote": "2026-09-20 に公式ページで確認（在庫あり）",
+   "features": "K10YG、クンツァイト。最大幅 約5.0×5.5mm、チェーン40cm。ジュエリーボックス付き。",
+   "reason": "9月のもう一つの誕生石。青ではなく、紫を帯びた淡いピンクを選びたい場合に。",
+   "caution": "青い石を好むかどうかで評価が変わる。淡い色のため、肌なじみは実物で確認したい。",
+   "use": [
+    "休日",
+    "会食"
+   ],
+   "notes": [
+    "商品：docx 作成後に追加（2026-09-20）。9月の誕生花・誕生石の候補として調査。",
+    "写真：docx 作成後に公式ページから追加取得（2026-09-19）"
+   ],
+   "links": [
+    {
+     "label": "写真出典（公式商品ページ）",
+     "url": "https://l-co-shop.jp/products/63-3800"
+    }
+   ],
+   "images": {
+    "item": "images/products/J25_item.jpg",
+    "wear": "images/products/J25_wear.jpg"
+   },
+   "wearLabel": "",
+   "hasWearPhoto": true,
+   "cat": "jewelry",
+   "added": true,
+   "photoExtra": true
   },
   {
    "id": "J15",
@@ -2345,7 +2590,7 @@ const DATA = {
    "label": "APPENDIX D",
    "title": "写真・情報の確認状況",
    "paras": [
-    "収録商品・シリーズ・体験：62項目（予算の上限 40,000円以上の16項目は外した）。docx 作成時点で単体写真を収録したものは29商品、人物の着用・使用例を収録したものは16商品です。ほかに単体写真を持つ商品でも、人物写真は未取得のものがあります。",
+    "収録商品・シリーズ・体験：69項目（予算の上限 40,000円以上の16項目は外した）。docx 作成時点で単体写真を収録したものは29商品、人物の着用・使用例を収録したものは16商品です。ほかに単体写真を持つ商品でも、人物写真は未取得のものがあります。",
     "写真を2種類とも収録した商品",
     "H01、H02、H03、H04、H05、H06、H10、H11、H12、J02、J03、J13、J15、L02、D02",
     "単体写真のみ収録した商品",
