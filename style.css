@@ -132,6 +132,8 @@ main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 48px; }
 .badge.s-strong { background: #f3e9d6; color: #6d5325; border-color: #e3d2ad; }
 .badge.s-cond { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
 .badge.s-over, .badge.s-pass { text-decoration: none; opacity: .8; }
+.badge.rank { background: #fff; color: var(--accent); border-color: var(--accent); font-weight: 600; }
+.badge.rank.top { background: var(--accent); color: #fff; }
 
 .gallery { display: grid; gap: 8px; }
 .gallery.g2 { grid-template-columns: 1fr 1fr; }

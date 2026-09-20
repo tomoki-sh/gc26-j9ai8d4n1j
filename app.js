@@ -36,6 +36,7 @@ const PRICE_BANDS = [
   { key: "none", label: "金額なし", test: p => p === null }
 ];
 const SORTS = [
+  { key: "rec", label: "おすすめ順" },   // rank のある商品（ヘア）を順位で。無い商品は掲載順
   { key: "id", label: "掲載順" },
   { key: "status", label: "評価順" },
   { key: "priceAsc", label: "価格が安い順" },
@@ -73,7 +74,8 @@ function parsePrice(text) {
 const PRICE = Object.fromEntries(ITEMS.map(it => [it.id, parsePrice(it.price)]));
 
 /* ---------- 状態 ---------- */
-const ui = Object.assign({ tab: "guide", status: [], band: [], use: [], starred: false, sort: "id", view: "cards", tryon: "red" }, readLS(UI_KEY, {}));
+const ui = Object.assign({ tab: "guide", status: [], band: [], use: [], starred: false, sort: "rec", view: "cards", tryon: "red", v: 2 }, readLS(UI_KEY, {}));
+if (!(ui.v >= 2)) { ui.sort = "rec"; ui.v = 2; }   // 以前に保存した並び替え（掲載順）を、おすすめ順の既定に一度だけ揃える
 let shared = Object.assign({ want: {}, note: {}, members: {} }, readLS(CACHE_KEY, {}));
 let myUid = "";
 let myEmail = "";   // ログイン中のアカウントのメールアドレス（Firebase から受け取るだけで、ファイルには書かない）
@@ -259,6 +261,7 @@ function showTab(key, scrollId) {
 
 /* ---------- 描画：カード ---------- */
 function statusBadge(s) { return `<span class="badge ${STATUS_CLASS[s] || ""}">${esc(s || "—")}</span>`; }
+function rankBadge(it) { return it.rank ? `<span class="badge rank${it.rank <= 3 ? " top" : ""}">おすすめ ${it.rank}位</span>` : ""; }
 function galleryImages(it) {
   const list = [];
   if (it.images.item) list.push({ src: it.images.item, cap: `${it.id} ${it.itemLabel || "商品単体"}`, kind: "item" });
@@ -327,7 +330,7 @@ function cardHTML(it) {
   const links = (it.links || []).map(l => `<a class="pill" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.label)} ↗</a>`).join("");
   return `<article class="card ${STATUS_CLASS[it.status] || ""}" id="item-${it.id}" data-id="${it.id}">
     <header class="card-head">
-      <div class="card-meta"><span class="card-id">${it.id}</span><span class="brand">${esc(it.brand)}</span>${statusBadge(it.status)}</div>
+      <div class="card-meta"><span class="card-id">${it.id}</span><span class="brand">${esc(it.brand)}</span>${rankBadge(it)}${statusBadge(it.status)}</div>
       <h3>${esc(it.name)}</h3>
       ${it.model ? `<p class="model">品番・型番：${esc(it.model)}</p>` : ""}
       <p class="price">${esc(it.price)}<small>${esc(it.priceNote)}</small></p>
@@ -355,6 +358,7 @@ function sortItems(list, key) {
   const price = (id, dir) => PRICE[id] === null ? Infinity : dir * PRICE[id];
   const cmp = {
     id: (a, b) => idx(a.id) - idx(b.id),
+    rec: (a, b) => (a.rank || Infinity) - (b.rank || Infinity) || idx(a.id) - idx(b.id),
     status: (a, b) => STATUS_ORDER.indexOf(a.status) - STATUS_ORDER.indexOf(b.status) || idx(a.id) - idx(b.id),
     priceAsc: (a, b) => price(a.id, 1) - price(b.id, 1) || idx(a.id) - idx(b.id),
     priceDesc: (a, b) => price(a.id, -1) - price(b.id, -1) || idx(a.id) - idx(b.id),
@@ -385,8 +389,9 @@ function renderToolbar(all) {
 }
 function tableHTML(list) {
   const rs = raters();
-  return `<div class="table-wrap"><table class="cmp"><thead><tr><th>ID</th><th>商品</th><th>価格</th><th>評価</th><th>用途</th>${rs.map(u => `<th>★${esc(memberName(u))}</th>`).join("")}<th>メモ</th></tr></thead><tbody>
-    ${list.map(it => `<tr data-goto="${it.id}" tabindex="0"><td class="mono">${it.id}</td><td><span class="muted small">${esc(it.brand)}</span><br>${esc(it.name)}</td><td class="nowrap">${esc(it.price)}</td><td>${statusBadge(it.status)}</td><td class="small">${esc((it.use || []).join("・"))}</td>${rs.map(u => `<td class="stars-cell">${"★".repeat(getWant(u, it.id)) || "—"}</td>`).join("")}<td class="small">${esc((getNote(it.id) || {}).text || "").slice(0, 40)}</td></tr>`).join("")}
+  const ranked = list.some(it => it.rank);
+  return `<div class="table-wrap"><table class="cmp"><thead><tr>${ranked ? "<th>おすすめ</th>" : ""}<th>ID</th><th>商品</th><th>価格</th><th>評価</th><th>用途</th>${rs.map(u => `<th>★${esc(memberName(u))}</th>`).join("")}<th>メモ</th></tr></thead><tbody>
+    ${list.map(it => `<tr data-goto="${it.id}" tabindex="0">${ranked ? `<td class="nowrap">${it.rank ? it.rank + "位" : "—"}</td>` : ""}<td class="mono">${it.id}</td><td><span class="muted small">${esc(it.brand)}</span><br>${esc(it.name)}</td><td class="nowrap">${esc(it.price)}</td><td>${statusBadge(it.status)}</td><td class="small">${esc((it.use || []).join("・"))}</td>${rs.map(u => `<td class="stars-cell">${"★".repeat(getWant(u, it.id)) || "—"}</td>`).join("")}<td class="small">${esc((getNote(it.id) || {}).text || "").slice(0, 40)}</td></tr>`).join("")}
   </tbody></table></div>`;
 }
 function binocularCompare() {
@@ -415,11 +420,14 @@ function renderFav() {
     : `<p class="empty">まだ★がありません。各カテゴリのカードで★をつけると、ここに集まります。</p>`);
 }
 function renderGuide() {
-  const picks = sortItems(ITEMS.filter(it => it.status === "本命" || it.status === "有力"), "status");
-  $("#guide-shortlist").innerHTML = `<h3>現在の本命・有力</h3><div class="mini-list">${picks.map(it => {
+  // おすすめ順がある商品（ヘア）は上位5点、無ければ本命・有力
+  const ranked = ITEMS.some(it => it.rank);
+  const picks = ranked ? sortItems(ITEMS.filter(it => it.rank), "rec").slice(0, 5)
+    : sortItems(ITEMS.filter(it => it.status === "本命" || it.status === "有力"), "status");
+  $("#guide-shortlist").innerHTML = `<h3>${ranked ? "ヘアアクセサリーのおすすめ 上位5" : "現在の本命・有力"}</h3><div class="mini-list">${picks.map(it => {
     const t = TRYON_MAP[it.id] || {};
     const img = t[ui.tryon] || it.images.item || "";
-    return `<a class="mini" href="#${it.id}" data-jump="${it.id}">${img ? `<img src="${esc(img)}" alt="" loading="lazy">` : ""}<span>${statusBadge(it.status)} <b>${it.id}</b> ${esc(it.name)}<br><small>${esc(it.brand)}・${esc(it.price)}</small></span></a>`;
+    return `<a class="mini" href="#${it.id}" data-jump="${it.id}">${img ? `<img src="${esc(img)}" alt="" loading="lazy">` : ""}<span>${it.rank ? rankBadge(it) : statusBadge(it.status)} <b>${it.id}</b> ${esc(it.name)}<br><small>${esc(it.brand)}・${esc(it.price)}</small></span></a>`;
   }).join("")}</div>`;
 }
 function renderAppendix() {

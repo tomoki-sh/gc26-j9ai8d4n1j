@@ -6,7 +6,8 @@ const DATA = {
    "kicker": "髪を結ぶ日常に添える、現在の中心候補",
    "title": "ヘアアクセサリー",
    "lead": [
-    "本命はH02。有力なH01・H03・H10も用途を分けて比較。クリップやバレッタは、髪量と普段の留め方が分からないため条件付きとしています。"
+    "並び順は、贈る側が 2026-09-20 に決めたおすすめ順です（1位 H17、2位 H04、3位 H18）。「本命・有力・条件付き」の表示は元の資料での判断で、順位とは別です。",
+    "クリップやバレッタは、髪量と普段の留め方で使い心地が変わります。"
    ]
   },
   "accent": {
@@ -88,7 +89,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "hair"
+   "cat": "hair",
+   "rank": 4
   },
   {
    "id": "H02",
@@ -121,7 +123,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "hair"
+   "cat": "hair",
+   "rank": 7
   },
   {
    "id": "H03",
@@ -154,7 +157,8 @@ const DATA = {
    },
    "wearLabel": "着用参考（別色）",
    "hasWearPhoto": true,
-   "cat": "hair"
+   "cat": "hair",
+   "rank": 15
   },
   {
    "id": "H04",
@@ -188,7 +192,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "hair"
+   "cat": "hair",
+   "rank": 2
   },
   {
    "id": "H05",
@@ -221,7 +226,8 @@ const DATA = {
    },
    "wearLabel": "着用参考（別色）",
    "hasWearPhoto": true,
-   "cat": "hair"
+   "cat": "hair",
+   "rank": 11
   },
   {
    "id": "H06",
@@ -254,7 +260,8 @@ const DATA = {
    },
    "wearLabel": "着用参考（別色）",
    "hasWearPhoto": true,
-   "cat": "hair"
+   "cat": "hair",
+   "rank": 18
   },
   {
    "id": "H07",
@@ -287,7 +294,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": false,
-   "cat": "hair"
+   "cat": "hair",
+   "rank": 5
   },
   {
    "id": "H08",
@@ -319,7 +327,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": false,
-   "cat": "hair"
+   "cat": "hair",
+   "rank": 14
   },
   {
    "id": "H09",
@@ -351,7 +360,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": false,
-   "cat": "hair"
+   "cat": "hair",
+   "rank": 17
   },
   {
    "id": "H10",
@@ -385,7 +395,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "hair"
+   "cat": "hair",
+   "rank": 8
   },
   {
    "id": "H11",
@@ -419,7 +430,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "hair"
+   "cat": "hair",
+   "rank": 6
   },
   {
    "id": "H12",
@@ -455,7 +467,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": true,
-   "cat": "hair"
+   "cat": "hair",
+   "rank": 9
   },
   {
    "id": "H13",
@@ -487,7 +500,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": false,
-   "cat": "hair"
+   "cat": "hair",
+   "rank": 12
   },
   {
    "id": "H14",
@@ -520,7 +534,8 @@ const DATA = {
    },
    "wearLabel": "",
    "hasWearPhoto": false,
-   "cat": "hair"
+   "cat": "hair",
+   "rank": 16
   },
   {
    "id": "H15",
@@ -552,7 +567,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "hair",
-   "photoExtra": true
+   "photoExtra": true,
+   "rank": 10
   },
   {
    "id": "H16",
@@ -588,7 +604,8 @@ const DATA = {
    "wearLabel": "",
    "hasWearPhoto": true,
    "cat": "hair",
-   "photoExtra": true
+   "photoExtra": true,
+   "rank": 13
   },
   {
    "id": "H17",
@@ -622,7 +639,8 @@ const DATA = {
    "hasWearPhoto": true,
    "cat": "hair",
    "added": true,
-   "photoExtra": true
+   "photoExtra": true,
+   "rank": 1
   },
   {
    "id": "H18",
@@ -655,7 +673,8 @@ const DATA = {
    "hasWearPhoto": false,
    "cat": "hair",
    "added": true,
-   "photoExtra": true
+   "photoExtra": true,
+   "rank": 3
   },
   {
    "id": "J01",
@@ -2458,5 +2477,9 @@ const DATA = {
     "docxWear": false
    }
   ]
+ },
+ "ranking": {
+  "cat": "hair",
+  "decided": "2026-09-20"
  }
 };
