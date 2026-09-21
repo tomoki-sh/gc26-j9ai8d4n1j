@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@1,500&family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- ?v= はキャッシュ対策。tools/prepare_publish.js が内容から自動更新する。手で変更しない。 -->
-  <link rel="stylesheet" href="style.css?v=7e45f584dda8" />
+  <link rel="stylesheet" href="style.css?v=a15b0459d528" />
 </head>
 <body class="locked auth-pending">
   <!-- 最初に見えるのはこのログイン画面だけ。許可された2人のアカウントで共有データを読めたらカタログを開く（app.js の setLocked）。 -->
@@ -25,6 +25,7 @@
       <button id="gate-sign-in" class="pill pill-solid pill-lg" type="button">Googleでログインして開く</button>
       <button id="gate-sign-out" class="pill pill-ghost" type="button" hidden>別のアカウントでログインし直す</button>
       <p id="gate-status" class="gate-status" role="status">確認しています…</p>
+      <p class="gate-hint">うまく開かないときは、もう一度ボタンを押してください。SNSアプリの中のブラウザやプライベートブラウズでは失敗することがあります。その場合は Safari や Chrome で開いてください。</p>
     </div>
   </section>
 
@@ -89,9 +90,9 @@
   </footer>
   </div>
 
-  <script src="catalog-data.js?v=7e45f584dda8" defer></script>
-  <script src="tryon-data.js?v=7e45f584dda8" defer></script>
-  <script src="app.js?v=7e45f584dda8" defer></script>
+  <script src="catalog-data.js?v=a15b0459d528" defer></script>
+  <script src="tryon-data.js?v=a15b0459d528" defer></script>
+  <script src="app.js?v=a15b0459d528" defer></script>
 
   <!-- Firebase（★とメモを2人で共有）。旅程サイトと同じ汎用プロジェクト travel-itinerary-sites を共用し、
        このカタログのDBパスは app.js の DB_PATH（"gift-catalog-2026"）。
@@ -116,12 +117,24 @@
     const logoutButtons = [document.getElementById("auth-sign-out"), document.getElementById("gate-sign-out")];
     const provider = new GoogleAuthProvider();
     provider.setCustomParameters({ prompt: "select_account" });
-    const persistence = setPersistence(auth, browserLocalPersistence);
-    loginButton.addEventListener("click", async () => {
+    // 既定でローカル保存。await はログインボタンの前に挟まない（iOS Safari で「押した直後」でないとポップアップが開けないため）
+    setPersistence(auth, browserLocalPersistence).catch(() => { /* 保存できない環境でもログインは試す */ });
+    const LOGIN_ERRORS = {
+      "auth/popup-blocked": "ポップアップが開けませんでした。もう一度ボタンを押すか、ブラウザの設定でポップアップを許可してください。",
+      "auth/network-request-failed": "通信できませんでした。電波の良い場所でもう一度お試しください。",
+      "auth/web-storage-unsupported": "このブラウザではログインできません。Safari や Chrome で開いてください（プライベートブラウズは避けてください）。",
+      "auth/operation-not-supported-in-this-environment": "このブラウザではログインできません。Safari や Chrome で開いてください。"
+    };
+    loginButton.addEventListener("click", () => {
       loginButton.disabled = true;
-      try { await persistence; await signInWithPopup(auth, provider); }
-      catch (e) { if (e.code !== "auth/popup-closed-by-user") window.Catalog.setStatus("ログインできませんでした。ポップアップの許可と通信状態を確認してください。", "error"); }
-      finally { loginButton.disabled = false; }
+      // クリックした流れのまま開く（間に await を入れない）
+      signInWithPopup(auth, provider)
+        .catch(e => {
+          const code = e && e.code;
+          if (code === "auth/popup-closed-by-user" || code === "auth/cancelled-popup-request") return;
+          window.Catalog.setStatus(LOGIN_ERRORS[code] || "ログインできませんでした。もう一度ボタンを押してみてください。", "error");
+        })
+        .finally(() => { loginButton.disabled = false; });
     });
     logoutButtons.forEach(b => b.addEventListener("click", async () => {
       if (!confirm("ログアウトしますか？（このブラウザに残した表示用の控えも消えます）")) return;

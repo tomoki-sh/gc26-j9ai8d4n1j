@@ -54,14 +54,16 @@ body.locked { background: var(--hero); }
 .auth-pending #gate-sign-in { display: none; }
 .gate { position: relative; min-height: 100vh; min-height: 100svh; display: grid; place-items: center; padding: 32px 16px; color: var(--hero-ink);
   background: linear-gradient(180deg, rgba(12, 7, 7, .55), rgba(12, 7, 7, .8)), url("images/decor/gate.webp") center / cover no-repeat, var(--hero); overflow: hidden; }
-.gate-card { position: relative; text-align: center; max-width: 520px; width: 100%; padding: 40px 24px 32px; border-radius: 22px;
+.gate-card { position: relative; text-align: center; max-width: 520px; width: 100%; min-width: 0; padding: 40px 24px 32px; border-radius: 22px;
   background: rgba(20, 12, 11, .55); border: 1px solid rgba(231, 194, 125, .35); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, .45); display: grid; gap: 14px; justify-items: center; }
+.gate-card > * { max-width: 100%; }   /* 長い文が折り返されず、カードからはみ出すのを防ぐ */
 .gate-kicker { margin: 0; letter-spacing: .3em; font-size: .72rem; color: #e7c27d; }
-.gate h1 { margin: 0; font-size: clamp(3rem, 13vw, 4.6rem); color: #fff; }
+.gate h1 { margin: 0; font-size: clamp(3rem, 13vw, 4.6rem); color: #fff; max-width: 100%; overflow-wrap: anywhere; }
 .gate-msg { margin: 0; font-family: var(--serif); font-size: 1.05rem; line-height: 1.9; color: #efe4de; }
 .pill-lg { font-size: 1rem; padding: 12px 26px; box-shadow: 0 6px 20px rgba(142, 27, 44, .45); }
 .pill-ghost { background: transparent; color: var(--hero-ink); border-color: rgba(255, 255, 255, .3); }
+.gate-hint { font-size: .76rem; line-height: 1.7; color: #c3b4ae; margin: 6px 0 0; max-width: 34em; }
 .gate-status { margin: 0; font-size: .8rem; color: #cdbfb9; min-height: 1.2em; }
 .gate-status[data-kind="error"] { color: #ffb3bd; }
 
